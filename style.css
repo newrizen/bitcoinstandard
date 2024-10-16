@@ -8,9 +8,10 @@ body{
 }
 
 main{
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
+    /* background-color: lightcoral; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .content{
