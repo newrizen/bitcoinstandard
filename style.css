@@ -9,7 +9,7 @@ body{
 
 main{
     /* background-color: lightcoral; */
-    display: block;
+    display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
