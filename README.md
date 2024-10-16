@@ -1,4 +1,4 @@
-<h1> Bitcoin Way 🔅</h1>
+<h1> Bitcoin Way ✔️</h1>
 <br>
 
 <h2> Este foi o projeto que de forma autodidata </h2>
