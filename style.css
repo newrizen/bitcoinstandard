@@ -8,7 +8,6 @@ body{
 }
 
 main{
-    /* background-color: lightcoral; */
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -17,19 +16,21 @@ main{
 .content{
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
+    width: 85%; /* Ajuste a largura do conteúdo */
+}
+
+p {
+    text-align: justify; /* Justifica os parágrafos */
+}
+
+ul {
+    padding-left: 20px; /* Ajusta o alinhamento das listas */
 }
 
 .topic-title{
     background-color: aquamarine;
     font-size: 20px;
     font-weight: 900;
-    
-}
-
-.topic-content{
-    width: 85%;
 }
 
 .subtopic{
