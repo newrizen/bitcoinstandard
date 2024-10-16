@@ -1,12 +1,12 @@
-<h1> Conversor de Moedas :currency_exchange: </h1>
+<h1> Bitcoin Way 🥇: </h1>
 <br>
 
-<h2> Este foi o projeto que aprendi no curso do DevClub </h2>
+<h2> Este foi o projeto que de forma autodidata </h2>
 
-<p> Aplicação básica de site para converter a moeda Real Brasileiro para Dólar Americano, Euro, Libra e Bitcoin. Consumindo AwesomeAPI para atualizar os dados de um servidor. </p>
+<p> Aplicação básica de site para informar sobre bitcoin e para converter a moeda Real Brasileiro para Dólar Americano, Euro, Libra e Bitcoin. Utilizando a AwesomeAPI para atualizar os dados do servidor. </p>
 
-<h2> Introdução </h2>
-<p> Consumir uma API que retornará os valores das moedas estrangeiras do dia em tempo real.  </p>
+<h2> Objetivo </h2>
+<p> Utilizar uma API que retornará os valores das moedas estrangeiras do dia em tempo real.  </p>
 
 <h2> Ferramentas </h2>
 <p> Na aplicação foi utilizado <a href="https://docs.awesomeapi.com.br/api-de-moedas" target="_blank" > AwesomeAPI </a> . </p>
@@ -21,5 +21,5 @@
 
 ## Imagem
 <div align="center">
-  <a href="https://conversor-de-moedas-carolina-dornas.netlify.app/"> <img width="80%" src="https://github.com/dornascarol/Conversor-de-moedas/blob/main/assets/Projeto.png?raw=true"/> </a>
+  <a href=""> <img width="80%" src=""/> </a>
 </div>  
