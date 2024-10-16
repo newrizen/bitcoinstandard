@@ -1,7 +1,7 @@
 <h1> Bitcoin Way ✔️</h1>
 <br>
 
-<h2> Este foi o projeto que de forma autodidata </h2>
+<h2> Projeto feito de forma autodidata </h2>
 
 <p> Aplicação básica de site para informar sobre bitcoin e para converter a moeda Real Brasileiro para Dólar Americano, Euro, Libra e Bitcoin. Utilizando a AwesomeAPI para atualizar os dados do servidor. </p>
 
