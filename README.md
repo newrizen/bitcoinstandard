@@ -1,0 +1,2 @@
+# BitcoinWay
+Just a test
