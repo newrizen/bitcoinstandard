@@ -19,9 +19,6 @@ main{
     width: 85%; /* Ajuste a largura do conteúdo */
 }
 
-p {
-    text-align: justify; /* Justifica os parágrafos */
-}
 
 ul {
     padding-left: 20px; /* Ajusta o alinhamento das listas */
