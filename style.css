@@ -68,7 +68,7 @@ select, input {
 }
 
 button {
-    background: #772FD3;
+    background: #8f00d7;
     border-radius: 5px;
     border: none;
     height: 48px;
@@ -87,7 +87,7 @@ button:active {
 }
 
 .section-box {
-    border: 2px solid #772FD3;
+    border: 2px solid #af00b0;
     border-radius: 20px;
     margin-top: 36px;
     padding: 12px;
@@ -111,12 +111,12 @@ button:active {
 }
 
 .currency {
-    color: #777777;
+    color: #888888;
     font-size: 14px;
 }
 
 .currency-value, .currency-value-to-convert {
-    color: #555555;
+    color: #777777;
     font-weight: 700;
     font-size: 20px;
 }
