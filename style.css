@@ -1,5 +1,6 @@
 *{
     font-family:'Courier New', Courier, monospace;
+    box-sizing: border-box; /* Garante que padding e border não aumentem a largura do elemento */
 }
 
 body{
@@ -16,7 +17,7 @@ main{
 .content{
     display: flex;
     flex-flow: column wrap;
-    width: 85%; /* Ajuste a largura do conteúdo */
+    width: 100%; /* Define a largura como 100% dentro do main */
 }
 
 .topic-title{
@@ -30,7 +31,9 @@ main{
 }
 
 #traits, #seed, #electrum, #trilemma{
-    width: 500px;
+    width: 100%; /* Deixa as imagens responsivas */
+    max-width: 500px; /* Limita a largura máxima das imagens */
+    margin: 0 auto; /* Centraliza as imagens */
 }
 
 a:link, a:visited{
@@ -39,6 +42,7 @@ a:link, a:visited{
 
 footer{
     text-align: center;
+    padding: 20px;
 }
 
 #author{
