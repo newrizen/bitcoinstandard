@@ -13,12 +13,19 @@ async function convertValues() {
     const euroToday = dataApi.EURBRL.high
     const libraToday = dataApi.GBPBRL.high
 
-    if(currencySelect.value == "bitcoin"){
-        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "BTC"
-        }).format(inputCurrencyValue / bitcoinToday).toFixed(8)                          //valor convertido => valor escrito / valor do Bitcoin hoje
+
+    if (currencySelect.value == "bitcoin") {
+    const bitcoinValueFormatted = (inputCurrencyValue / bitcoinToday).toFixed(8); // formata o valor com 8 casas decimais
+    currencyValueConverted.innerHTML = bitcoinValueFormatted + " BTC";             // exibe o valor com 8 casas decimais
     }
+
+//    if(currencySelect.value == "bitcoin"){
+//        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+//            style: "currency",
+//            currency: "BTC"
+//        }).format(inputCurrencyValue / bitcoinToday).                          //valor convertido => valor escrito / valor do Bitcoin hoje
+//    }
+    
     
     if (currencySelect.value == "dolar") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
