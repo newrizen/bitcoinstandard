@@ -19,11 +19,6 @@ main{
     width: 85%; /* Ajuste a largura do conteúdo */
 }
 
-
-ul {
-    padding-left: 20px; /* Ajusta o alinhamento das listas */
-}
-
 .topic-title{
     background-color: aquamarine;
     font-size: 20px;
