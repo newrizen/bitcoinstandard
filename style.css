@@ -43,7 +43,7 @@ main{
 }
 
 a:link, a:visited{
-    color: #000000;
+    color: #999999;
 }
 
 label {
@@ -111,12 +111,12 @@ button:active {
 }
 
 .currency {
-    color: #888888;
+    color: #999999;
     font-size: 14px;
 }
 
 .currency-value, .currency-value-to-convert {
-    color: #777777;
+    color: #888888;
     font-weight: 700;
     font-size: 20px;
 }
