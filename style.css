@@ -6,7 +6,8 @@
 body{
     margin: 0;
     padding: 0;
-    background: #FFFFFF;
+    background: #000000; /* Fundo preto */
+    color: #FFFFFF; /* Texto branco */
 }
 
 main{
