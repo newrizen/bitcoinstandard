@@ -121,6 +121,10 @@ button:active {
     font-size: 20px;
 }
 
+.colored{
+    background-color: aquamarine;
+}
+
 footer{
     text-align: center;
     padding: 20px;
