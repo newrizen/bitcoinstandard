@@ -5,13 +5,13 @@
 
 body{
     margin: 0;
-    padding: 10;
+    padding: 0;
 }
 
 main{
     max-width: 1200px; /* Define a largura máxima do main */
     margin: 0 auto; /* Centraliza o main */
-    padding: 10px; /* Aplica um espaçamento interno */
+    padding: 0px; /* Aplica um espaçamento interno */
 }
 
 .content{
