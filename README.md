@@ -25,5 +25,5 @@
 </div>  
 
 ## Codigos Base para o projeto:
-<p>- Página: <a href="https://github.com/cypherpunkfairy" target="_blank" ></p>
-<p>- Conversor: <a href="https://github.com/dornascarol/API-conversor-de-moedas" target="_blank" ></p>
+<p>- Página: <a href="https://github.com/cypherpunkfairy" ></p>
+<p>- Conversor: <a href="https://github.com/dornascarol/API-conversor-de-moedas" ></p>
