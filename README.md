@@ -1,12 +1,12 @@
 <h1> Bitcoin Way 🔑</h1>
 <br>
 
-<h2> Projeto feito de forma autodidata </h2>
+<h2> Projeto pessoal </h2>
 
 <p> Aplicação básica de site para informar sobre bitcoin e para converter a moeda Real Brasileiro para Dólar Americano, Euro, Libra e Bitcoin. Utilizando a AwesomeAPI para atualizar os dados do servidor. </p>
 
 <h2> Objetivo </h2>
-<p> Utilizar uma API que retornará os valores das moedas estrangeiras do dia em tempo real.  </p>
+<p> Utiliza uma API que retorna o valor diário de reais em bitcoin ou moedas estrangeiras em tempo real.  </p>
 
 <h2> Ferramentas </h2>
 <p> Na aplicação foi utilizado <a href="https://docs.awesomeapi.com.br/api-de-moedas" target="_blank" > AwesomeAPI </a> . </p>
@@ -23,3 +23,7 @@
 <div align="center">
   <a href=""> <img width="80%" src=""/> </a>
 </div>  
+
+## Codigos Base para o projeto:
+<p>- Página: <a href="https://github.com/cypherpunkfairy" target="_blank" ></p>
+<p>- Conversor: <a href="https://github.com/dornascarol/API-conversor-de-moedas" target="_blank" ></p>
