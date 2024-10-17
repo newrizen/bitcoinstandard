@@ -53,7 +53,7 @@ label {
 }
 
 select, input {
-    background: #FFFFFF;
+    background: #000000;
     border: 1px solid #BBBBBB;
     border-radius: 4px;
     height: 48px;
@@ -63,7 +63,7 @@ select, input {
     padding-left: 18px;
     font-weight: 700;
     font-size: 17px;
-    color: #000000;
+    color: #555555;
     cursor: pointer;
 }
 
