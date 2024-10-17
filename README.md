@@ -1,6 +1,10 @@
 <h1> Bitcoin Way</h1>
 <br>
 
+<div align="center">
+  <a href="https://github.com/NewHoriz/BitcoinWay/blob/main/asssets/bitcoin-profit-way-864582444.jpg"> <img width="80%" src=""/> </a>
+</div>  
+
 <h2> Projeto pessoal </h2>
 
 <p> Aplicação básica de site para informar sobre bitcoin e para converter a moeda Real Brasileiro para Dólar Americano, Euro, Libra e Bitcoin. Utilizando a AwesomeAPI para atualizar os dados do servidor. </p>
