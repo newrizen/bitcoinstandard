@@ -12,7 +12,7 @@ main{
     max-width: 1200px; /* Define a largura máxima do main */
     margin: 0 auto; /* Centraliza o main */
     padding: 20px; /* Aplica um espaçamento interno */
-    padding-left: 40px; /* Recuo adicional à esquerda */
+    padding-left: 20px; /* Recuo adicional à esquerda */
 }
 
 .content{
