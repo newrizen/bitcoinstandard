@@ -14,6 +14,10 @@ main{
     padding: 20px; /* Aplica um espaçamento interno */
 }
 
+.center{
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
 .content{
     display: flex;
     flex-flow: column wrap;
