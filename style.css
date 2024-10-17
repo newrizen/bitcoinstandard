@@ -94,6 +94,29 @@ section {
     align-items: center;
 }
 
+
+.arrow-img {
+    margin: 16px 0;
+}
+
+.currency-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.currency {
+    color: #777777;
+    font-size: 14px;
+}
+
+.currency-value, .currency-value-to-convert {
+    color: #555555;
+    font-weight: 700;
+    font-size: 20px;
+}
+
 footer{
     text-align: center;
     padding: 20px;
