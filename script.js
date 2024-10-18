@@ -4,7 +4,9 @@ const currencySelect = document.querySelector(".currency-select")
 async function convertValues() {
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")     //valor em Real Brasileiro
-    const currencyValueConverted = document.querySelector(".currency-value")               //valor em outras moedas
+    const currencyValueConverted = document.querySelector(".currency-value")                //valor em outras moedas
+    const currencyValueConverted1 = document.querySelector(".currency-value-1")             //valor de 1 Real em BTC
+    const currencyValueConverted2 = document.querySelector(".currency-value-2")             //valor de 1 Real em sats
 
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL").then(element => element.json())
 
@@ -14,13 +16,13 @@ async function convertValues() {
     const libraToday = dataApi.GBPBRL.high
 
     if (currencySelect.value == "satoshis") {
-    const bitcoinValueFormatted = (inputCurrencyValue / bitcoinToday).toFixed(8); // formata o valor com 8 casas decimais
-    currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
+    const satoshisValueFormatted = (1 / bitcoinToday).toFixed(8);             // formata o valor com 8 casas decimais
+    currencyValueConverted.innerHTML = "₿ " + satoshisValueFormatted;         // exibe o valor com 8 casas decimais
     }
 
     if (currencySelect.value == "sats") {
-    const bitcoinValueFormatted = (inputCurrencyValue / bitcoinToday).toFixed(8)*100000000; // formata o valor com 8 casas decimais
-    currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
+    const satsValueFormatted = (1 / bitcoinToday).toFixed(8)*100000000;       // formata o valor para numeros inteiros
+    currencyValueConverted.innerHTML = "₿ " + satsValueFormatted;             // exibe o valor com 8 casas decimais
     }
 
     
