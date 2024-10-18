@@ -15,14 +15,12 @@ async function convertValues() {
     const euroToday = dataApi.EURBRL.high
     const libraToday = dataApi.GBPBRL.high
 
-    if (currencySelect.value == "satoshis") {
     const satoshisValueFormatted = (1 / bitcoinToday).toFixed(8);             // formata o valor com 8 casas decimais
-    currencyValueConverted.innerHTML = "₿ " + satoshisValueFormatted;         // exibe o valor com 8 casas decimais
+    currencyValueConverted.innerHTML = satoshisValueFormatted;         // exibe o valor com 8 casas decimais
     }
 
-    if (currencySelect.value == "sats") {
     const satsValueFormatted = (1 / bitcoinToday).toFixed(8)*100000000;       // formata o valor para numeros inteiros
-    currencyValueConverted.innerHTML = "₿ " + satsValueFormatted;             // exibe o valor com 8 casas decimais
+    currencyValueConverted.innerHTML = satsValueFormatted;             // exibe o valor com 8 casas decimais
     }
 
     
@@ -70,6 +68,7 @@ function changeCurrency() {
     const currencyName = document.getElementById("currency-name")
     const currancyImage = document.querySelector(".currency-img")
 
+    
     if (currencySelect.value == "bitcoin") {
         currencyName.innerHTML = "Bitcoin"
         currancyImage.src = "./assets/bitcoin.png"
