@@ -15,13 +15,14 @@ async function convertValues() {
     const euroToday = dataApi.EURBRL.high
     const libraToday = dataApi.GBPBRL.high
 
-    const satoshisValueFormatted = (1 / bitcoinToday).toFixed(8);             // formata o valor com 8 casas decimais
-    currencyValueConverted.innerHTML = satoshisValueFormatted;         // exibe o valor com 8 casas decimais
-    }
 
-    const satsValueFormatted = (1 / bitcoinToday).toFixed(8)*100000000;       // formata o valor para numeros inteiros
-    currencyValueConverted.innerHTML = satsValueFormatted;             // exibe o valor com 8 casas decimais
-    }
+    // Exibir diretamente o valor de satoshis (1 BRL em satoshis)
+    const satoshisValueFormatted = (1 / bitcoinToday).toFixed(8);      // formata o valor do bitcoin com 8 casas decimais
+    satoshisValueElement.innerHTML = `Satoshis: ${satoshisValueFormatted}`; // Exibe diretamente o valor em satoshis
+
+    // Exibir diretamente o valor em sats (1 BRL em sats)
+    const satsValueFormatted = (1 / bitcoinToday * 100000000).toFixed(0);   // formata o valor para números inteiros
+    satsValueElement.innerHTML = `Sats: ${satsValueFormatted}`; // Exibe diretamente o valor em sats
 
     
     if (currencySelect.value == "bitcoin") {
