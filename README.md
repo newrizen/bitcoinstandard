@@ -2,7 +2,7 @@
 <br>
 
 <div align="center">
-  <a href="https://github.com/NewHoriz/BitcoinWay/blob/main/assets/bitcoin-profit-way-864582444.jpg"> <img width="60%" src="https://github.com/NewHoriz/BitcoinWay/blob/main/asssets/bitcoin-profit-way-864582444.jpg?raw=true"/> </a>
+  <a href="https://github.com/NewHoriz/BitcoinWay/blob/main/assets/bitcoin-profit-way-864582444.jpg"> <img width="60%" src="https://github.com/NewHoriz/BitcoinWay/blob/main/assets/bitcoin-profit-way-864582444.jpg?raw=true"/> </a>
 </div>  
 
 <h2> Projeto pessoal </h2>
