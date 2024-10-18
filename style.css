@@ -43,7 +43,7 @@ main{
 }
 
 a:link, a:visited{
-    color: #A8A8A8;
+    color: #AE8CD6;
 }
 
 label {
@@ -54,7 +54,7 @@ label {
 
 select, input {
     background: #121212;
-    border: 1px solid #BBBBBB;
+    border: 1px solid #AAAAAA;
     border-radius: 4px;
     height: 48px;
     width: 100%;
@@ -87,7 +87,7 @@ button:active {
 }
 
 .section-box {
-    border: 2px solid #af00b0;
+    border: 2px solid #922da2;
     border-radius: 20px;
     margin-top: 36px;
     padding: 12px;
