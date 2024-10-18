@@ -36,6 +36,10 @@ main{
     font-weight: 900;
 }
 
+.small-text{
+    font-size: 10px;
+}
+
 #traits, #seed, #electrum, #trilemma{
     width: 100%; /* Deixa as imagens responsivas */
     max-width: 500px; /* Limita a largura máxima das imagens */
