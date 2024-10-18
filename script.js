@@ -60,22 +60,22 @@ function changeCurrency() {
 
     if (currencySelect.value == "bitcoin") {
         currencyName.innerHTML = "Bitcoin"
-        currancyImage.src = "./asssets/bitcoin.png"
+        currancyImage.src = "./assets/bitcoin.png"
     }
     
     if (currencySelect.value == "dolar") {
         currencyName.innerHTML = "Dólar Americano"
-        currancyImage.src = "./asssets/dolar.png"
+        currancyImage.src = "./assets/dolar.png"
     }
 
     if (currencySelect.value == "euro") {
         currencyName.innerHTML = "Euro"
-        currancyImage.src = "./asssets/euro.png"
+        currancyImage.src = "./assets/euro.png"
     }
 
     if (currencySelect.value == "libra") {
         currencyName.innerHTML = "Libra"
-        currancyImage.src = "./asssets/libra.png"
+        currancyImage.src = "./assets/libra.png"
     }
 
 
