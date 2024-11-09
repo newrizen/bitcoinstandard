@@ -18,7 +18,7 @@ main{
 
 
 .responsive-iframe {
-    height: 90vh; /* Altura padrão para desktop */
+    height: 675px; /* Altura padrão para desktop */
 }
 
 /* Ajuste para telas menores (tablets e celulares) */
