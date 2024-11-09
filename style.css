@@ -24,19 +24,19 @@ main{
 /* Ajuste para telas menores (tablets e celulares) */
 @media (max-width: 1024px) {
     .responsive-iframe {
-        height: 400px; /* Altura ajustada para tablets */
+        height: 675px; /* Altura ajustada para tablets */
     }
 }
 
 @media (max-width: 768px) {
     .responsive-iframe {
-        height: 400px; /* Altura ajustada para celulares */
+        height: 675px; /* Altura ajustada para celulares */
     }
 }
 
 @media (max-width: 480px) {
     .responsive-iframe {
-        height: 400px; /* Altura ajustada para celulares pequenos */
+        height: 675px; /* Altura ajustada para celulares pequenos */
     }
 }
 
