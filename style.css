@@ -16,6 +16,17 @@ main{
     padding: 20px; /* Aplica um espaçamento interno */
 }
 
+.responsive-iframe {
+    height: 675vh; /* Altura padrão para desktop */
+}
+
+/* Ajuste para telas menores (exemplo: celulares) */
+@media (max-width: 768px) {
+    .responsive-iframe {
+        height: 300vh; /* Altura reduzida para telas menores */
+    }
+}
+
 .center{
     text-align: center; /* Centraliza o texto horizontalmente */
 }
