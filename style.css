@@ -20,17 +20,9 @@ main{
 .iframe-container {
     position: relative;
     width: 100%;            /* Ocupa 100% da largura do elemento pai */
-    padding-top: 60%;       /* Define a altura como 60% da largura */
+    height: 675px;
 }
 
-.responsive-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
 
 
 .center{
