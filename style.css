@@ -23,7 +23,7 @@ main{
 /* Ajuste para telas menores (exemplo: celulares) */
 @media (max-width: 768px) {
     .responsive-iframe {
-        height: 350vh; /* Altura reduzida para telas menores */
+        height: 450vh; /* Altura reduzida para telas menores */
     }
 }
 
