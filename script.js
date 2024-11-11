@@ -107,27 +107,27 @@ function changeCurrency() {
     const currancyImage = document.querySelector(".currency-img")
 
     //moeda de converção
-    if (currencySelect1.value == "bitcoin") {
+    if (currencySelect1.value == "bitcoin1") {
         currencyName.innerHTML = "Bitcoin"
         currancyImage.src = "./assets/bitcoin.png"
     }
 
-    if (currencySelect1.value == "real") {
+    if (currencySelect1.value == "real1") {
         currencyName.innerHTML = "Real"
         currancyImage.src = "./assets/real.png"
     }
     
-    if (currencySelect1.value == "dolar") {
+    if (currencySelect1.value == "dolar1") {
         currencyName.innerHTML = "Dólar Americano"
         currancyImage.src = "./assets/dolar.png"
     }
 
-    if (currencySelect1.value == "euro") {
+    if (currencySelect1.value == "euro1") {
         currencyName.innerHTML = "Euro"
         currancyImage.src = "./assets/euro.png"
     }
 
-    if (currencySelect1.value == "libra") {
+    if (currencySelect1.value == "libra1") {
         currencyName.innerHTML = "Libra"
         currancyImage.src = "./assets/libra.png"
     }
