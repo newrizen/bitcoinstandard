@@ -104,11 +104,12 @@ async function convertValues() {
 //    }).format(inputCurrencyValue)                                            //repetir o valor que está no input
 //}
 
+
+    //moeda fonte de conversão
 function changeCurrency() {
     const currencyName = document.getElementById("currency-name")
     const currancyImage = document.querySelector(".currency-img")
 
-    //moeda de converção
     if (currencySelect1.value == "bitcoin1") {
         currencyName.innerHTML = "Bitcoin"
         currancyImage.src = "./assets/bitcoin.png"
@@ -134,7 +135,11 @@ function changeCurrency() {
         currancyImage.src = "./assets/libra.png"
     }
 
-    //moeda convertida
+    //moeda destinada a conversão
+function changeCurrency() {
+    const currencyName = document.getElementById("currency-name")
+    const currancyImage = document.querySelector(".currency-img")
+    
     if (currencySelect2.value == "real") {
         currencyName.innerHTML = "Real"
         currancyImage.src = "./assets/real.png"
