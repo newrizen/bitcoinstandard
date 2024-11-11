@@ -39,7 +39,7 @@ async function convertValues() {
 //        }).format(inputCurrencyValue / bitcoinToday).                          //valor convertido => valor escrito / valor do Bitcoin hoje
 //    }
     
-    if(currencySelect.value == "real1"){
+    if(currencySelect1.value == "real1"){
         currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL"
@@ -47,49 +47,49 @@ async function convertValues() {
     }
 
     
-    if (currencySelect.value == "dolar1") {
+    if (currencySelect1.value == "dolar1") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD"
         }).format(inputCurrencyValue)                               //valor convertido => valor escrito / valor do Dólar hoje
     }
     
-    if (currencySelect.value == "euro1") {
+    if (currencySelect1.value == "euro1") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "EUR"
         }).format(inputCurrencyValue)                               //valor convertido => valor escrito / valor do Euro hoje
     }
 
-    if(currencySelect.value == "libra1"){
+    if(currencySelect1.value == "libra1"){
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
             style: "currency",
             currency: "GBP"
         }).format(inputCurrencyValue)                             //valor convertido => valor escrito / valor da Libra hoje 
     }
 
-    if(currencySelect.value == "real"){
+    if(currencySelect2.value == "real"){
         currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL"
         }).format(inputCurrencyValue)                                         //repetir o valor que está no input
     }
     
-    if (currencySelect.value == "dolar") {
+    if (currencySelect2.value == "dolar") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD"
         }).format(inputCurrencyValue / dolarToday)                               //valor convertido => valor escrito / valor do Dólar hoje
     }
     
-    if (currencySelect.value == "euro") {
+    if (currencySelect2.value == "euro") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "EUR"
         }).format(inputCurrencyValue / euroToday)                               //valor convertido => valor escrito / valor do Euro hoje
     }
 
-    if(currencySelect.value == "libra"){
+    if(currencySelect2.value == "libra"){
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
             style: "currency",
             currency: "GBP"
