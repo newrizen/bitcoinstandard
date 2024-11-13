@@ -23,11 +23,6 @@
 <br>
 <br>
 
-## Imagem
-<div align="center">
-  <a href=""> <img width="80%" src=""/> </a>
-</div>  
-
 ## Codigos Base para o projeto:
 <p>- Página: https://github.com/cypherpunkfairy/Bitcoin </p>
 <p>- Conversor: https://github.com/dornascarol/API-conversor-de-moedas </p>
