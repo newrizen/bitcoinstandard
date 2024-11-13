@@ -7,7 +7,7 @@ const currencyValueConverted1 = document.querySelector(".currency-value-1"); // 
 const currencyValueConverted2 = document.querySelector(".currency-value-2"); // valor de 1 Real em sats
 
 
-async function convertValues0() {
+function convertValues0() {
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
     const bitcoinToday = dataApi.BTCBRL.high
 
@@ -25,7 +25,7 @@ async function convertValues0() {
 async function convertValues1() {
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")     //valor em Real Brasileiro
-    const currencyValueConverted = document.querySelector(".currency-value")                //valor em outras moedas
+    const currencyValueConverted = document.querySelector(".currency-value-1")                //valor em outras moedas
 
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL").then(element => element.json())
 
@@ -133,9 +133,9 @@ async function convertValues2() {
 
 
 // Executa a função quando a página estiver carregada
-window.onload = function() {
-    convertValues0();
-};
+//window.onload = function() {
+//    convertValues0();
+//};
 
     //moeda fonte de conversão
 //function changeCurrency0() {
@@ -214,7 +214,7 @@ function changeCurrency2() {
     convertValues2()
 }
 
-currencySelect0()
+convertValues0()
 currencySelect1.addEventListener("change", changeCurrency1)
 currencySelect2.addEventListener("change", changeCurrency2)
 convertButton.addEventListener("click", convertValues2)
