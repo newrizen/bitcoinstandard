@@ -106,7 +106,7 @@ async function convertValues() {
 
 
     //moeda fonte de conversão
-function changeCurrency() {
+function changeCurrency1() {
     const currencyName = document.getElementById("currency-name")
     const currancyImage = document.querySelector(".currency-img")
 
@@ -135,8 +135,11 @@ function changeCurrency() {
         currancyImage.src = "./assets/libra.png"
     }
 
+    convertValues()
+}
+    
     //moeda destinada a conversão
-function changeCurrency() {
+function changeCurrency2() {
     const currencyName = document.getElementById("currency-name")
     const currancyImage = document.querySelector(".currency-img")
     
@@ -168,5 +171,6 @@ function changeCurrency() {
     convertValues()
 }
 
-currencySelect.addEventListener("change", changeCurrency)
+currencySelect1.addEventListener("change", changeCurrency1)
+currencySelect2.addEventListener("change", changeCurrency2)
 convertButton.addEventListener("click", convertValues)
