@@ -1,4 +1,4 @@
-<h1> Bitcoin Way</h1>
+<h1> Bitcoin Standard</h1>
 <br>
 
 <div align="center">
