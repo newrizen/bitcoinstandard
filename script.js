@@ -134,11 +134,9 @@ async function convertValues2() {
     //moeda fonte de conversão
 function changeCurrency0() {
     const currencyName = document.getElementById("currency-name")
-    const currancyImage = document.querySelector(".currency-img")
 
     if (currencySelect0.value == "bitcoin0") {
         currencyName.innerHTML = "Bitcoin"
-        currancyImage.src = "./assets/bitcoin.png"
     }
 
     convertValues0()
@@ -207,10 +205,10 @@ function changeCurrency2() {
         currancyImage.src = "./assets/libra.png"
     }
 
-    convertValues()
+    convertValues2()
 }
 
 currencySelect0.addEventListener("change", changeCurrency0)
 currencySelect1.addEventListener("change", changeCurrency1)
 currencySelect2.addEventListener("change", changeCurrency2)
-convertButton.addEventListener("click", convertValues)
+convertButton.addEventListener("click", convertValues2)
