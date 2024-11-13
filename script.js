@@ -132,6 +132,11 @@ async function convertValues2() {
 //}
 
 
+// Executa a função quando a página estiver carregada
+window.onload = function() {
+    convertValues0();
+};
+
     //moeda fonte de conversão
 //function changeCurrency0() {
 //    const currencyName = document.getElementById("currency-name")
