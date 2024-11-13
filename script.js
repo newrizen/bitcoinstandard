@@ -4,9 +4,6 @@ const currencySelect1 = document.querySelector(".currency-select1")
 const currencySelect2 = document.querySelector(".currency-select2")
 
 async function convertValues0() {
-    const inputCurrencyValue = document.querySelector(".input-currency").value
-    const currencyValueToConvert = document.querySelector(".currency-value-to-convert")     //valor em Real Brasileiro
-    const currencyValueConverted = document.querySelector(".currency-value")                //valor em outras moedas
     const currencyValueConverted1 = document.querySelector(".currency-value-1")             //valor de 1 Real em BTC
     const currencyValueConverted2 = document.querySelector(".currency-value-2")             //valor de 1 Real em sats
 
