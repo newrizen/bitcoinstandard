@@ -1,5 +1,4 @@
-const convertButton1 = document.querySelector(".convert-button1")
-const convertButton2 = document.querySelector(".convert-button2")
+const convertButton = document.querySelector(".convert-button")
 const currencySelect1 = document.querySelector(".currency-select1")
 const currencySelect2 = document.querySelector(".currency-select2")
 
@@ -22,12 +21,6 @@ async function convertValues0() {
         currencyValueConverted2.innerHTML = `${satsValueFormatted} sats`;                 // Exibe os sats
     }
 
-    
-    if (currencySelect.value == "bitcoin") {
-    const bitcoinValueFormatted = (inputCurrencyValue / bitcoinToday).toFixed(8); // formata o valor com 8 casas decimais
-    currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
-    }
-
 async function convertValues1() {
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")     //valor em Real Brasileiro
@@ -41,17 +34,14 @@ async function convertValues1() {
     const libraToday = dataApi.GBPBRL.high
 
     
-    if (currencySelect.value == "bitcoin") {
-    const bitcoinValueFormatted = (inputCurrencyValue / bitcoinToday).toFixed(8); // formata o valor com 8 casas decimais
-    currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
-    }
 
-//    if(currencySelect.value == "bitcoin"){
-//        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
-//            style: "currency",
-//            currency: "BTC"
-//        }).format(inputCurrencyValue / bitcoinToday).                          //valor convertido => valor escrito / valor do Bitcoin hoje
-//    }
+
+    if(currencySelect1.value == "bitcoin1"){
+       currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputCurrencyValue).                                        //repetir o valor que está no input
+    }
     
     if(currencySelect1.value == "real1"){
         currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
@@ -65,21 +55,21 @@ async function convertValues1() {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD"
-        }).format(inputCurrencyValue)                               //valor convertido => valor escrito / valor do Dólar hoje
+        }).format(inputCurrencyValue)                                        //repetir o valor que está no input
     }
     
     if (currencySelect1.value == "euro1") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "EUR"
-        }).format(inputCurrencyValue)                               //valor convertido => valor escrito / valor do Euro hoje
+        }).format(inputCurrencyValue)                                       //repetir o valor que está no input
     }
 
     if(currencySelect1.value == "libra1"){
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
             style: "currency",
             currency: "GBP"
-        }).format(inputCurrencyValue)                             //valor convertido => valor escrito / valor da Libra hoje 
+        }).format(inputCurrencyValue)                                      //repetir o valor que está no input
     }
     
 //    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
@@ -101,7 +91,7 @@ async function convertValues2() {
     const libraToday = dataApi.GBPBRL.high
 
     
-    if (currencySelect.value == "bitcoin") {
+    if (currencySelect2.value == "bitcoin") {
     const bitcoinValueFormatted = (inputCurrencyValue / bitcoinToday).toFixed(8); // formata o valor com 8 casas decimais
     currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
     }
@@ -217,11 +207,10 @@ function changeCurrency2() {
         currancyImage.src = "./assets/libra.png"
     }
 
-    convertValues2()
+    convertValues()
 }
 
 currencySelect0.addEventListener("change", changeCurrency0)
 currencySelect1.addEventListener("change", changeCurrency1)
 currencySelect2.addEventListener("change", changeCurrency2)
-convertButton1.addEventListener("click", convertValues1)
-convertButton2.addEventListener("click", convertValues2)
+convertButton.addEventListener("click", convertValues)
