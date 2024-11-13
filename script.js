@@ -1,13 +1,14 @@
 const convertButton = document.querySelector(".convert-button")
+
 const currencySelect1 = document.querySelector(".currency-select1")
 const currencySelect2 = document.querySelector(".currency-select2")
 
+const currencyValueConverted1 = document.querySelector(".currency-value-1"); // valor de 1 Real em BTC
+const currencyValueConverted2 = document.querySelector(".currency-value-2"); // valor de 1 Real em sats
+
+
 async function convertValues0() {
-    const currencyValueConverted1 = document.querySelector(".currency-value-1")             //valor de 1 Real em BTC
-    const currencyValueConverted2 = document.querySelector(".currency-value-2")             //valor de 1 Real em sats
-
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
-
     const bitcoinToday = dataApi.BTCBRL.high
 
 
@@ -132,15 +133,15 @@ async function convertValues2() {
 
 
     //moeda fonte de conversão
-function changeCurrency0() {
-    const currencyName = document.getElementById("currency-name")
-
-    if (currencySelect0.value == "bitcoin0") {
-        currencyName.innerHTML = "Bitcoin"
-    }
-
-    convertValues0()
-}
+//function changeCurrency0() {
+//    const currencyName = document.getElementById("currency-name")
+//
+//    if (currencySelect0.value == "bitcoin0") {
+//        currencyName.innerHTML = "Bitcoin"
+//    }
+//
+//    convertValues0()
+//}
     
     //moeda fonte de conversão
 function changeCurrency1() {
@@ -208,7 +209,7 @@ function changeCurrency2() {
     convertValues2()
 }
 
-currencySelect0.addEventListener("change", changeCurrency0)
+currencySelect0()
 currencySelect1.addEventListener("change", changeCurrency1)
 currencySelect2.addEventListener("change", changeCurrency2)
 convertButton.addEventListener("click", convertValues2)
