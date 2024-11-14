@@ -75,12 +75,12 @@ async function convertValues() {
                 currency: "GBP"
             }).format(inputCurrencyValue)                                      //repetir o valor que está no input
         }
-        else{
+        else {
             currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
                 style: "currency",
                 currency: "BRL"
         }).format(inputCurrencyValue)                                               //repetir o valor que está no input
-
+        }
     
     if (currencySelect2.value == "bitcoin2") {
         const bitcoinValueFormatted = (inputCurrencyValue / BitcoinRealToday).toFixed(8); // formata o valor com 8 casas decimais
