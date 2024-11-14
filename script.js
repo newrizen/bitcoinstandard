@@ -131,13 +131,13 @@ async function convertValues() {
 
 
 // Função para definir o valor padrão em Real no input
-function setDefaultCurrencyValue() {
-    const inputCurrencyValue = Number(document.querySelector(".input-currency").value.replace(/[^\d,-]/g, "").replace(",", "."));
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
-        style: "currency",
-        currency: "BRL"
-    }).format(inputCurrencyValue);
-}
+//function setDefaultCurrencyValue() {
+//    const inputCurrencyValue = Number(document.querySelector(".input-currency").value.replace(/[^\d,-]/g, "").replace(",", "."));
+//    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+//        style: "currency",
+//        currency: "BRL"
+//    }).format(inputCurrencyValue);
+//}
 
 
     //moeda fonte de conversão
