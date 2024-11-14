@@ -30,7 +30,8 @@ async function displaySats() {
     }
 
 async function convertValues() {
-    const inputCurrencyValue = document.querySelector(".input-currency").value
+    //const inputCurrencyValue = document.querySelector(".input-currency").value
+    const inputCurrencyValue = Number(document.querySelector(".input-currency").value.replace(/[^\d,-]/g, "").replace(",", "."));
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")    //valor em moedas 1 - antes BRL
     const currencyValueConverted = document.querySelector(".currency-value")             //valor em outras moedas 2
 
@@ -109,11 +110,11 @@ async function convertValues() {
         }).format(inputCurrencyValue / LibraRealToday)                             //valor convertido => valor escrito / valor da Libra hoje 
     }
 
-//    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
-//        style: "currency",
-//        currency: "BRL"
-//    }).format(inputCurrencyValue)                                            //repetir o valor que está no input
-//}
+    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    }).format(inputCurrencyValue)                                            //repetir o valor que está no input
+}
 
     //moeda fonte de conversão
 function changeCurrency1() {
