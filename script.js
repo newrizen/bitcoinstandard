@@ -90,10 +90,10 @@ async function convertValues() {
     }
     
     if(currencySelect2.value == "real2"){
-        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL"
-        }).format(inputCurrencyValue / 1)                                             //repetir o valor que está no input
+        }).format(inputCurrencyValue)                                               //repetir o valor que está no input
     }
     
     if (currencySelect2.value == "euro2") {
