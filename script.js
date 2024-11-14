@@ -1,4 +1,5 @@
-const convertButton = document.querySelector(".convert-button")
+const convertButton1 = document.querySelector(".convert-button")
+const convertButton2 = document.querySelector(".convert-button")
 
 const currencySelect1 = document.querySelector(".currency-select1")
 const currencySelect2 = document.querySelector(".currency-select2")
@@ -190,5 +191,5 @@ window.onload = function() {
 
 currencySelect1.addEventListener("change", changeCurrency1)
 currencySelect2.addEventListener("change", changeCurrency2)
-convertButton.addEventListener("click", convertValues1)
-convertButton.addEventListener("click", convertValues2)
+convertButton1.addEventListener("click", convertValues1)
+convertButton2.addEventListener("click", convertValues2)
