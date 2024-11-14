@@ -14,6 +14,7 @@ async function convertValues0() {
     
     // Função para exibir satoshis e sats diretamente
 async function displayBTC() {
+    const currencyValueConverted = document.querySelector(".currency-value-1")             //valor em outras moedas 2
     const btcValueFormatted = (1 / bitcoinToday).toFixed(8);              // valor em satoshis com 8 casas decimais
     
     // Exibir valores no HTML
@@ -21,6 +22,7 @@ async function displayBTC() {
     }
 
 async function displaySats() {
+    const currencyValueConverted = document.querySelector(".currency-value-2")             //valor em outras moedas 2
     const satsValueFormatted = (1 / bitcoinToday * 100000000).toFixed(0); // valor em sats (inteiro)
     
     // Exibir valores no HTML
@@ -30,7 +32,7 @@ async function displaySats() {
 async function convertValues() {
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")    //valor em moedas 1 - antes BRL
-    const currencyValueConverted = document.querySelector(".currency-value-2")             //valor em outras moedas 2
+    const currencyValueConverted = document.querySelector(".currency-value")             //valor em outras moedas 2
 
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL").then(element => element.json())
 
@@ -173,10 +175,6 @@ function changeCurrency() {
     convertValues()
 }
 
-currencySelect1.addEventListener("change", changeCurrency)
-currencySelect2.addEventListener("change", changeCurrency)
-convertButton.addEventListener("click", convertValues)
-
 //Executa a função quando a página estiver carregada
 window.onload = function() {
     displayBTC();
@@ -186,3 +184,7 @@ window.onload = function() {
 window.onload = function() {
     displaySats();
 };
+
+currencySelect1.addEventListener("change", changeCurrency)
+currencySelect2.addEventListener("change", changeCurrency)
+convertButton.addEventListener("click", convertValues)
