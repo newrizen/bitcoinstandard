@@ -146,8 +146,6 @@ function changeCurrency1() {
         currencyName1.innerHTML = "Libra"
         currancyImage1.src = "./assets/libra.png"
     }
-    
-    convertValues()
 }
     
     //moeda fonte de conversão
