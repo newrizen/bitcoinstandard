@@ -7,10 +7,10 @@ const currencyValueFixed1 = document.querySelector(".currency-value-1"); // valo
 const currencyValueFixed2 = document.querySelector(".currency-value-2"); // valor de 1 Real em sats
 
 
-async function convertValues0() {
-    const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
-    const BitcoinRealToday = dataApi.BTCBRL.high
-    }
+//async function convertValues0() {
+//    const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
+//     const BitcoinRealToday = dataApi.BTCBRL.high
+//    }
     
     // Função para exibir satoshis e sats diretamente
 async function displayBTC() {
