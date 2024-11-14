@@ -12,16 +12,6 @@ async function convertValues0() {
     const bitcoinToday = dataApi.BTCBRL.high
 
 
-    // Função para exibir satoshis e sats diretamente
-function displaySatoshisAndSats() {
-    const btcValueFormatted = (1 / bitcoinToday).toFixed(8);              // valor em satoshis com 8 casas decimais
-    const satsValueFormatted = (1 / bitcoinToday * 100000000).toFixed(0); // valor em sats (inteiro)
-    
-    // Exibir valores no HTML
-    currencyValueFixed1.innerHTML = `${btcValueFormatted} BTC (Satoshis)`;                 // Exibe os satoshis
-    currencyValueFixed2.innerHTML = `${satsValueFormatted} sats`;                          // Exibe os sats
-    }
-
 async function convertValues() {
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")    //valor em moedas 1 - antes BRL
@@ -42,11 +32,9 @@ async function convertValues() {
         }).format(inputCurrencyValue)                                         //repetir o valor que está no input
     }
 
-    if(currencySelect1.value == "bitcoin1"){
-       currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "BTC"
-        }).format(inputCurrencyValue).                                        //repetir o valor que está no input
+    if (currencySelect2.value == "bitcoin1") {
+    const bitcoinValueFormatted = (inputCurrencyValue).toFixed(8); // formata o valor com 8 casas decimais
+    currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
     }
     
     if (currencySelect1.value == "dolar1") {
@@ -69,7 +57,34 @@ async function convertValues() {
             currency: "GBP"
         }).format(inputCurrencyValue)                                      //repetir o valor que está no input
     }
+
     
+    if (currencySelect2.value == "bitcoin2") {
+    const bitcoinValueFormatted = (inputCurrencyValue / bitcoinToday).toFixed(8); // formata o valor com 8 casas decimais
+    currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
+    }
+    
+    if (currencySelect2.value == "dolar2") {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue / dolarToday)                               //valor convertido => valor escrito / valor do Dólar hoje
+    }
+    
+    if (currencySelect2.value == "euro2") {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue / euroToday)                               //valor convertido => valor escrito / valor do Euro hoje
+    }
+
+    if(currencySelect2.value == "libra2"){
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(inputCurrencyValue / libraToday)                             //valor convertido => valor escrito / valor da Libra hoje 
+    }
+
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
         currency: "BRL"
@@ -77,62 +92,21 @@ async function convertValues() {
 }
 
 
+    // Função para exibir satoshis e sats diretamente
+function displaySatoshisAndSats() {
+    const btcValueFormatted = (1 / bitcoinToday).toFixed(8);              // valor em satoshis com 8 casas decimais
+    const satsValueFormatted = (1 / bitcoinToday * 100000000).toFixed(0); // valor em sats (inteiro)
     
-    if (currencySelect2.value == "bitcoin") {
-    const bitcoinValueFormatted = (inputCurrencyValue / bitcoinToday).toFixed(8); // formata o valor com 8 casas decimais
-    currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
-    }
-
-//    if(currencySelect.value == "bitcoin"){
-//        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
-//            style: "currency",
-//            currency: "BTC"
-//        }).format(inputCurrencyValue / bitcoinToday).                          //valor convertido => valor escrito / valor do Bitcoin hoje
-//    }
-    
-    if (currencySelect2.value == "dolar") {
-        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD"
-        }).format(inputCurrencyValue / dolarToday)                               //valor convertido => valor escrito / valor do Dólar hoje
+    // Exibir valores no HTML
+    currencyValueFixed1.innerHTML = `${btcValueFormatted} BTC (Satoshis)`;                 // Exibe os satoshis
+    currencyValueFixed2.innerHTML = `${satsValueFormatted} sats`;                          // Exibe os sats
     }
     
-    if (currencySelect2.value == "euro") {
-        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
-            style: "currency",
-            currency: "EUR"
-        }).format(inputCurrencyValue / euroToday)                               //valor convertido => valor escrito / valor do Euro hoje
-    }
-
-    if(currencySelect2.value == "libra"){
-        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
-            style: "currency",
-            currency: "GBP"
-        }).format(inputCurrencyValue / libraToday)                             //valor convertido => valor escrito / valor da Libra hoje 
-    }
-    
-//    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
-//        style: "currency",
-//        currency: "BRL"
-//    }).format(inputCurrencyValue)                                            //repetir o valor que está no input
-//}
-
-
 //Executa a função quando a página estiver carregada
 window.onload = function() {
     convertValues0();
 };
 
-    //moeda fonte de conversão
-//function changeCurrency0() {
-//    const currencyName = document.getElementById("currency-name")
-//
-//    if (currencySelect0.value == "bitcoin0") {
-//        currencyName.innerHTML = "Bitcoin"
-//    }
-//
-//    convertValues0()
-//}
     
     //moeda fonte de conversão
 function changeCurrency() {
