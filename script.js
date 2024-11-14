@@ -10,7 +10,17 @@ const currencyValueFixed2 = document.querySelector(".currency-value-2"); // valo
 async function convertValues0() {
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
     const bitcoinToday = dataApi.BTCBRL.high
-
+    }
+    
+    // Função para exibir satoshis e sats diretamente
+async function displaySatoshisAndSats() {
+    const btcValueFormatted = (1 / bitcoinToday).toFixed(8);              // valor em satoshis com 8 casas decimais
+    const satsValueFormatted = (1 / bitcoinToday * 100000000).toFixed(0); // valor em sats (inteiro)
+    
+    // Exibir valores no HTML
+    currencyValueFixed1.innerHTML = `${btcValueFormatted} BTC (Satoshis)`;                 // Exibe os satoshis
+    currencyValueFixed2.innerHTML = `${satsValueFormatted} sats`;                          // Exibe os sats
+    }
 
 async function convertValues() {
     const inputCurrencyValue = document.querySelector(".input-currency").value
@@ -32,7 +42,7 @@ async function convertValues() {
         }).format(inputCurrencyValue)                                         //repetir o valor que está no input
     }
 
-    if (currencySelect2.value == "bitcoin1") {
+    if (currencySelect1.value == "bitcoin1") {
     const bitcoinValueFormatted = (inputCurrencyValue).toFixed(8); // formata o valor com 8 casas decimais
     currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
     }
@@ -71,7 +81,7 @@ async function convertValues() {
         }).format(inputCurrencyValue / dolarToday)                               //valor convertido => valor escrito / valor do Dólar hoje
     }
     
-    if(currencySelect1.value == "real2"){
+    if(currencySelect2.value == "real2"){
         currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL"
@@ -97,22 +107,7 @@ async function convertValues() {
         currency: "BRL"
     }).format(inputCurrencyValue)                                            //repetir o valor que está no input
 }
-
-
-    // Função para exibir satoshis e sats diretamente
-function displaySatoshisAndSats() {
-    const btcValueFormatted = (1 / bitcoinToday).toFixed(8);              // valor em satoshis com 8 casas decimais
-    const satsValueFormatted = (1 / bitcoinToday * 100000000).toFixed(0); // valor em sats (inteiro)
     
-    // Exibir valores no HTML
-    currencyValueFixed1.innerHTML = `${btcValueFormatted} BTC (Satoshis)`;                 // Exibe os satoshis
-    currencyValueFixed2.innerHTML = `${satsValueFormatted} sats`;                          // Exibe os sats
-    }
-    
-//Executa a função quando a página estiver carregada
-window.onload = function() {
-    convertValues0();
-};
 
     
     //moeda fonte de conversão
@@ -176,3 +171,8 @@ function changeCurrency() {
 currencySelect1.addEventListener("change", changeCurrency)
 currencySelect2.addEventListener("change", changeCurrency)
 convertButton.addEventListener("click", convertValues)
+
+//Executa a função quando a página estiver carregada
+window.onload = function() {
+    convertValues0();
+};
