@@ -1,5 +1,4 @@
-const convertButton1 = document.querySelector(".convert-button")
-const convertButton2 = document.querySelector(".convert-button")
+const convertButton = document.querySelector(".convert-button")
 
 const currencySelect1 = document.querySelector(".currency-select1")
 const currencySelect2 = document.querySelector(".currency-select2")
@@ -147,6 +146,8 @@ function changeCurrency1() {
         currencyName1.innerHTML = "Libra"
         currancyImage1.src = "./assets/libra.png"
     }
+    
+    convertValues()
 }
     
     //moeda fonte de conversão
