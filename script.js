@@ -93,27 +93,27 @@ async function convertValues() {
         currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL"
-        }).format(inputCurrencyValue)                                             //repetir o valor que está no input
+        }).format(inputCurrencyValue / 1)                                             //repetir o valor que está no input
     }
     
     if (currencySelect2.value == "euro2") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "EUR"
-        }).format(inputCurrencyValue / EuroRealToday)                               //valor convertido => valor escrito / valor do Euro hoje
+        }).format(inputCurrencyValue / EuroRealToday)                             //valor convertido => valor escrito / valor do Euro hoje
     }
 
     if(currencySelect2.value == "libra2"){
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
             style: "currency",
             currency: "GBP"
-        }).format(inputCurrencyValue / LibraRealToday)                             //valor convertido => valor escrito / valor da Libra hoje 
+        }).format(inputCurrencyValue / LibraRealToday)                           //valor convertido => valor escrito / valor da Libra hoje 
     }
 
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
         currency: "BRL"
-    }).format(inputCurrencyValue)                                            //repetir o valor que está no input
+    }).format(inputCurrencyValue)                                               //repetir o valor que está no input
 }
 
     //moeda fonte de conversão
