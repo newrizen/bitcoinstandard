@@ -7,25 +7,25 @@ const currencyValueFixed1 = document.querySelector(".currency-value-1"); // valo
 const currencyValueFixed2 = document.querySelector(".currency-value-2"); // valor de 1 Real em sats
 
 
-function convertValues0() {
+async function convertValues0() {
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
     const bitcoinToday = dataApi.BTCBRL.high
 
 
     // Função para exibir satoshis e sats diretamente
-async function displaySatoshisAndSats() {
+function displaySatoshisAndSats() {
     const btcValueFormatted = (1 / bitcoinToday).toFixed(8);              // valor em satoshis com 8 casas decimais
     const satsValueFormatted = (1 / bitcoinToday * 100000000).toFixed(0); // valor em sats (inteiro)
     
     // Exibir valores no HTML
-    currencyValueFixed1.innerHTML = `${btcValueFormatted} BTC (Satoshis)`;      // Exibe os satoshis
-    currencyValueFixed2.innerHTML = `${satsValueFormatted} sats`;               // Exibe os sats
+    currencyValueFixed1.innerHTML = `${btcValueFormatted} BTC (Satoshis)`;                 // Exibe os satoshis
+    currencyValueFixed2.innerHTML = `${satsValueFormatted} sats`;                          // Exibe os sats
     }
 
 async function convertValues() {
     const inputCurrencyValue = document.querySelector(".input-currency").value
-    const currencyValueToConvert = document.querySelector(".currency-value-to-convert")       //valor em moedas 1 - antes BRL
-    const currencyValueConverted = document.querySelector(".currency-value-2")                //valor em outras moedas 2
+    const currencyValueToConvert = document.querySelector(".currency-value-to-convert")    //valor em moedas 1 - antes BRL
+    const currencyValueConverted = document.querySelector(".currency-value-2")             //valor em outras moedas 2
 
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL").then(element => element.json())
 
@@ -118,10 +118,10 @@ async function convertValues() {
 //}
 
 
-// Executa a função quando a página estiver carregada
-//window.onload = function() {
-//    convertValues0();
-//};
+//Executa a função quando a página estiver carregada
+window.onload = function() {
+    convertValues0();
+};
 
     //moeda fonte de conversão
 //function changeCurrency0() {
