@@ -70,7 +70,7 @@ async function convertValues() {
     }
 
     if(currencySelect1.value == "libra1"){
-        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-GB", {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
             style: "currency",
             currency: "GBP"
         }).format(inputCurrencyValue)                                      //repetir o valor que está no input
