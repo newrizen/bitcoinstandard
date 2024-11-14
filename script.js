@@ -145,6 +145,8 @@ function changeCurrency1() {
         currencyName1.innerHTML = "Libra"
         currancyImage1.src = "./assets/libra.png"
     }
+    
+    convertValues1()
 }
     
     //moeda fonte de conversão
@@ -177,7 +179,7 @@ function changeCurrency2() {
         currancyImage2.src = "./assets/libra.png"
     }
 
-    convertValues()
+    convertValues2()
 }
 
 //Executa a função quando a página estiver carregada
@@ -188,4 +190,5 @@ window.onload = function() {
 
 currencySelect1.addEventListener("change", changeCurrency1)
 currencySelect2.addEventListener("change", changeCurrency2)
-convertButton.addEventListener("click", convertValues)
+convertButton.addEventListener("click", convertValues1)
+convertButton.addEventListener("click", convertValues2)
