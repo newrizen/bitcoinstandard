@@ -149,7 +149,7 @@ async function convertValues2() {
 //}
     
     //moeda fonte de conversão
-function changeCurrency1() {
+function changeCurrency() {
     const currencyName = document.getElementById("currency-name")
     const currancyImage = document.querySelector(".currency-img")
 
@@ -177,44 +177,35 @@ function changeCurrency1() {
         currencyName.innerHTML = "Libra"
         currancyImage.src = "./assets/libra.png"
     }
-
-    convertValues1()
-}
     
-    //moeda destinada a conversão
-function changeCurrency2() {
-    const currencyName = document.getElementById("currency-name")
-    const currancyImage = document.querySelector(".currency-img")
-    
-    if (currencySelect2.value == "real") {
+    if (currencySelect2.value == "real2") {
         currencyName.innerHTML = "Real"
         currancyImage.src = "./assets/real.png"
     }
 
-    if (currencySelect2.value == "dolar") {
+    if (currencySelect2.value == "dolar2") {
         currencyName.innerHTML = "Dólar Americano"
         currancyImage.src = "./assets/dolar.png"
     }
     
-    if (currencySelect2.value == "euro") {
+    if (currencySelect2.value == "euro2") {
         currencyName.innerHTML = "Euro"
         currancyImage.src = "./assets/euro.png"
     }
     
-    if (currencySelect2.value == "bitcoin") {
+    if (currencySelect2.value == "bitcoin2") {
         currencyName.innerHTML = "Bitcoin"
         currancyImage.src = "./assets/bitcoin.png"
     }
 
-    if (currencySelect2.value == "libra") {
+    if (currencySelect2.value == "libra2") {
         currencyName.innerHTML = "Libra"
         currancyImage.src = "./assets/libra.png"
     }
 
-    convertValues2()
+    convertValues()
 }
 
-convertValues0()
 currencySelect1.addEventListener("change", changeCurrency1)
 currencySelect2.addEventListener("change", changeCurrency2)
-convertButton.addEventListener("click", convertValues2)
+convertButton.addEventListener("click", convertValues)
