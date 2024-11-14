@@ -116,9 +116,8 @@ async function convertValues() {
 }
     
 
-    
     //moeda fonte de conversão
-function changeCurrency() {
+function changeCurrency1() {
     const currencyName = document.getElementById("currency-name")
     const currancyImage = document.querySelector(".currency-img")
 
@@ -146,7 +145,13 @@ function changeCurrency() {
         currencyName.innerHTML = "Libra"
         currancyImage.src = "./assets/libra.png"
     }
+}
     
+    //moeda fonte de conversão
+function changeCurrency2() {
+    const currencyName = document.getElementById("currency-name")
+    const currancyImage = document.querySelector(".currency-img")
+
     if (currencySelect2.value == "real2") {
         currencyName.innerHTML = "Real"
         currancyImage.src = "./assets/real.png"
@@ -178,13 +183,9 @@ function changeCurrency() {
 //Executa a função quando a página estiver carregada
 window.onload = function() {
     displayBTC();
-};
-
-//Executa a função quando a página estiver carregada
-window.onload = function() {
     displaySats();
 };
 
-currencySelect1.addEventListener("change", changeCurrency)
-currencySelect2.addEventListener("change", changeCurrency)
+currencySelect1.addEventListener("change", changeCurrency1)
+currencySelect2.addEventListener("change", changeCurrency2)
 convertButton.addEventListener("click", convertValues)
