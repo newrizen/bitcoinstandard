@@ -43,10 +43,10 @@ async function convertValues() {
     const EuroRealToday = dataApi.EURBRL.high
     const LibraRealToday = dataApi.GBPBRL.high
 
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
-        style: "currency",
-        currency: "BRL"
-    }).format(inputCurrencyValue)                                               //repetir o valor que está no input
+    //currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+    //    style: "currency",
+    //    currency: "BRL"
+    //}).format(inputCurrencyValue)                                               //repetir o valor que está no input
     
     if(currencySelect1.value == "real1"){
         currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
@@ -115,6 +115,17 @@ async function convertValues() {
         }).format(inputCurrencyValue / LibraRealToday)                           //valor convertido => valor escrito / valor da Libra hoje 
     }
 }
+
+
+// Função para definir o valor padrão em Real no input
+function setDefaultCurrencyValue() {
+    const inputCurrencyValue = Number(document.querySelector(".input-currency").value.replace(/[^\d,-]/g, "").replace(",", "."));
+    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    }).format(inputCurrencyValue);
+}
+
 
     //moeda fonte de conversão
 function changeCurrency1() {
@@ -186,6 +197,11 @@ window.onload = function() {
     displaySats();
 };
 
-currencySelect1.addEventListener("change", changeCurrency1)
+// Event listeners
+currencySelect1.addEventListener("change", () => {
+    changeCurrency1();
+    setDefaultCurrencyValue();
+});
+//currencySelect1.addEventListener("change", changeCurrency1)
 currencySelect2.addEventListener("change", changeCurrency2)
 convertButton.addEventListener("click", convertValues)
