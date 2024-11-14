@@ -206,6 +206,6 @@ function changeCurrency() {
     convertValues()
 }
 
-currencySelect1.addEventListener("change", changeCurrency1)
-currencySelect2.addEventListener("change", changeCurrency2)
+currencySelect1.addEventListener("change", changeCurrency)
+currencySelect2.addEventListener("change", changeCurrency)
 convertButton.addEventListener("click", convertValues)
