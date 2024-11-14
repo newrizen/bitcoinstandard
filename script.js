@@ -204,14 +204,14 @@ function changeCurrency2() {
     convertValues()
 }
 
-//Executa a função quando a página estiver carregada
-//window.onload = function() {
-//    displayBTC();
-//    displaySats();
-//};
+Executa a função quando a página estiver carregada
+window.onload = function() {
+    displayBTC();
+    displaySats();
+};
 
-currencyValueFixed1.onload(displayBTC)
-currencyValueFixed2.onload(displaySats)
+//currencyValueFixed1.onload(displayBTC)
+//currencyValueFixed2.onload(displaySats)
 currencySelect1.addEventListener("change", changeCurrency1)
 currencySelect2.addEventListener("change", changeCurrency2)
 convertButton.addEventListener("click", convertValues)
