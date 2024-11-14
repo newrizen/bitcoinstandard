@@ -44,26 +44,26 @@ async function convertValues() {
 
     
     if(currencySelect1.value == "real1"){
-        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL"
         }).format(inputCurrencyValue)                                         //repetir o valor que está no input
     }
 
     if (currencySelect1.value == "bitcoin1") {
-    const bitcoinValueFormatted = (inputCurrencyValue).toFixed(8); // formata o valor com 8 casas decimais
-    currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
+        const bitcoinValueFormatted = (inputCurrencyValue).toFixed(8); // formata o valor com 8 casas decimais
+        currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
     }
     
     if (currencySelect1.value == "dolar1") {
-        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD"
         }).format(inputCurrencyValue)                                        //repetir o valor que está no input
     }
     
     if (currencySelect1.value == "euro1") {
-        currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
             currency: "EUR"
         }).format(inputCurrencyValue)                                       //repetir o valor que está no input
@@ -78,8 +78,8 @@ async function convertValues() {
 
     
     if (currencySelect2.value == "bitcoin2") {
-    const bitcoinValueFormatted = (inputCurrencyValue / BitcoinRealToday).toFixed(8); // formata o valor com 8 casas decimais
-    currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
+        const bitcoinValueFormatted = (inputCurrencyValue / BitcoinRealToday).toFixed(8); // formata o valor com 8 casas decimais
+        currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
     }
     
     if (currencySelect2.value == "dolar2") {
