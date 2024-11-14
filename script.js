@@ -118,63 +118,63 @@ async function convertValues() {
 
     //moeda fonte de conversão
 function changeCurrency1() {
-    const currencyName = document.getElementById("currency-name")
-    const currancyImage = document.querySelector(".currency-img")
+    const currencyName1 = document.getElementById("currency-name1")
+    const currancyImage1 = document.querySelector(".currency-img1")
 
     if (currencySelect1.value == "bitcoin1") {
-        currencyName.innerHTML = "Bitcoin"
-        currancyImage.src = "./assets/bitcoin.png"
+        currencyName1.innerHTML = "Bitcoin"
+        currancyImage1.src = "./assets/bitcoin.png"
     }
 
     if (currencySelect1.value == "real1") {
-        currencyName.innerHTML = "Real"
-        currancyImage.src = "./assets/real.png"
+        currencyName1.innerHTML = "Real"
+        currancyImage1.src = "./assets/real.png"
     }
     
     if (currencySelect1.value == "dolar1") {
-        currencyName.innerHTML = "Dólar Americano"
-        currancyImage.src = "./assets/dolar.png"
+        currencyName1.innerHTML = "Dólar Americano"
+        currancyImage1.src = "./assets/dolar.png"
     }
 
     if (currencySelect1.value == "euro1") {
-        currencyName.innerHTML = "Euro"
-        currancyImage.src = "./assets/euro.png"
+        currencyName1.innerHTML = "Euro"
+        currancyImage1.src = "./assets/euro.png"
     }
 
     if (currencySelect1.value == "libra1") {
-        currencyName.innerHTML = "Libra"
-        currancyImage.src = "./assets/libra.png"
+        currencyName1.innerHTML = "Libra"
+        currancyImage1.src = "./assets/libra.png"
     }
 }
     
     //moeda fonte de conversão
 function changeCurrency2() {
-    const currencyName = document.getElementById("currency-name")
-    const currancyImage = document.querySelector(".currency-img")
+    const currencyName2 = document.getElementById("currency-name2")
+    const currancyImage2 = document.querySelector(".currency-img2")
 
     if (currencySelect2.value == "real2") {
-        currencyName.innerHTML = "Real"
-        currancyImage.src = "./assets/real.png"
+        currencyName2.innerHTML = "Real"
+        currancyImage2.src = "./assets/real.png"
     }
 
     if (currencySelect2.value == "dolar2") {
-        currencyName.innerHTML = "Dólar Americano"
-        currancyImage.src = "./assets/dolar.png"
+        currencyName2.innerHTML = "Dólar Americano"
+        currancyImage2.src = "./assets/dolar.png"
     }
     
     if (currencySelect2.value == "euro2") {
-        currencyName.innerHTML = "Euro"
-        currancyImage.src = "./assets/euro.png"
+        currencyName2.innerHTML = "Euro"
+        currancyImage2.src = "./assets/euro.png"
     }
     
     if (currencySelect2.value == "bitcoin2") {
-        currencyName.innerHTML = "Bitcoin"
-        currancyImage.src = "./assets/bitcoin.png"
+        currencyName2.innerHTML = "Bitcoin"
+        currancyImage2.src = "./assets/bitcoin.png"
     }
 
     if (currencySelect2.value == "libra2") {
-        currencyName.innerHTML = "Libra"
-        currancyImage.src = "./assets/libra.png"
+        currencyName2.innerHTML = "Libra"
+        currancyImage2.src = "./assets/libra.png"
     }
 
     convertValues()
