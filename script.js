@@ -42,6 +42,10 @@ async function convertValues() {
     const EuroRealToday = dataApi.EURBRL.high
     const LibraRealToday = dataApi.GBPBRL.high
 
+    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    }).format(inputCurrencyValue)                                               //repetir o valor que está no input
     
     if(currencySelect1.value == "real1"){
         currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
