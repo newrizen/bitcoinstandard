@@ -30,7 +30,94 @@ async function displaySats() {
     currencyValueFixed2.innerHTML = `${satsValueFormatted} sats`;                          // Exibe os sats
     }
 
-async function convertValues() {
+async function convertValues1() {
+    //const inputCurrencyValue = document.querySelector(".input-currency").value
+    const inputCurrencyValue = Number(document.querySelector(".input-currency").value.replace(/[^\d,-]/g, "").replace(",", "."));
+    const currencyValueToConvert = document.querySelector(".currency-value-to-convert")    //valor em moedas 1 - antes BRL
+    const currencyValueConverted = document.querySelector(".currency-value")             //valor em outras moedas 2
+
+    const dataApi = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL").then(element => element.json())
+
+    const BitcoinRealToday = dataApi.BTCBRL.high
+    const DolarRealToday = dataApi.USDBRL.high
+    const EuroRealToday = dataApi.EURBRL.high
+    const LibraRealToday = dataApi.GBPBRL.high
+
+    
+    if(currencySelect1.value == "real1"){
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue)                                         //repetir o valor que está no input
+    }
+
+    if (currencySelect1.value == "bitcoin1") {
+        const bitcoinValueFormatted = (inputCurrencyValue).toFixed(8); // formata o valor com 8 casas decimais
+        currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
+    }
+    
+    if (currencySelect1.value == "dolar1") {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue)                                        //repetir o valor que está no input
+    }
+    
+    if (currencySelect1.value == "euro1") {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue)                                       //repetir o valor que está no input
+    }
+
+    if(currencySelect1.value == "libra1"){
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(inputCurrencyValue)                                      //repetir o valor que está no input
+    }
+
+    
+    if (currencySelect2.value == "bitcoin2") {
+        const bitcoinValueFormatted = (inputCurrencyValue / BitcoinRealToday).toFixed(8); // formata o valor com 8 casas decimais
+        currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
+    }
+    
+    if (currencySelect2.value == "dolar2") {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue / DolarRealToday)                               //valor convertido => valor escrito / valor do Dólar hoje
+    }
+    
+    if(currencySelect2.value == "real2"){
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue)                                               //repetir o valor que está no input
+    }
+    
+    if (currencySelect2.value == "euro2") {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue / EuroRealToday)                             //valor convertido => valor escrito / valor do Euro hoje
+    }
+
+    if(currencySelect2.value == "libra2"){
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(inputCurrencyValue / LibraRealToday)                           //valor convertido => valor escrito / valor da Libra hoje 
+    }
+
+    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    }).format(inputCurrencyValue)                                               //repetir o valor que está no input
+}
+
+async function convertValues2() {
     //const inputCurrencyValue = document.querySelector(".input-currency").value
     const inputCurrencyValue = Number(document.querySelector(".input-currency").value.replace(/[^\d,-]/g, "").replace(",", "."));
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")    //valor em moedas 1 - antes BRL
