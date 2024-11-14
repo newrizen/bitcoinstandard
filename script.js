@@ -13,12 +13,17 @@ async function convertValues0() {
     }
     
     // Função para exibir satoshis e sats diretamente
-async function displaySatoshisAndSats() {
+async function displayBTC() {
     const btcValueFormatted = (1 / bitcoinToday).toFixed(8);              // valor em satoshis com 8 casas decimais
-    const satsValueFormatted = (1 / bitcoinToday * 100000000).toFixed(0); // valor em sats (inteiro)
     
     // Exibir valores no HTML
     currencyValueFixed1.innerHTML = `${btcValueFormatted} BTC (Satoshis)`;                 // Exibe os satoshis
+    }
+
+async function displaySats() {
+    const satsValueFormatted = (1 / bitcoinToday * 100000000).toFixed(0); // valor em sats (inteiro)
+    
+    // Exibir valores no HTML
     currencyValueFixed2.innerHTML = `${satsValueFormatted} sats`;                          // Exibe os sats
     }
 
@@ -174,5 +179,10 @@ convertButton.addEventListener("click", convertValues)
 
 //Executa a função quando a página estiver carregada
 window.onload = function() {
-    convertValues0();
+    displayBTC();
+};
+
+//Executa a função quando a página estiver carregada
+window.onload = function() {
+    displaySats();
 };
