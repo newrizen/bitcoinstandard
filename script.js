@@ -35,13 +35,22 @@ async function convertValues() {
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")    //valor em moedas 1 - antes BRL
     const currencyValueConverted = document.querySelector(".currency-value")             //valor em outras moedas 2
 
-    const dataApi = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL").then(element => element.json())
+    const dataApi = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL,BTC-USD,EUR-USD,GBP-USD,BTC-EUR,EUR-GBP").then(element => element.json())
 
     const BitcoinRealToday = dataApi.BTCBRL.high
     const DolarRealToday = dataApi.USDBRL.high
     const EuroRealToday = dataApi.EURBRL.high
     const LibraRealToday = dataApi.GBPBRL.high
+    
+    const BitcoinDolarToday = dataApi.BTCUSD.high
+    const EuroDolarToday = dataApi.EURUSD.high
+    const LibraDolarToday = dataApi.GBPUSD.high
 
+    const BitcoinEuroToday = dataApi.BTCEUR.high
+    const LibraEuroToday = dataApi.GBPEUR.high 
+
+    const BitcoinLibraToday = dataApi.EURGBP.high
+    
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
         currency: "BRL"
@@ -196,11 +205,13 @@ function changeCurrency2() {
 }
 
 //Executa a função quando a página estiver carregada
-window.onload = function() {
-    displayBTC();
-    displaySats();
-};
+//window.onload = function() {
+//    displayBTC();
+//    displaySats();
+//};
 
+currencyValueFixed1.onload(displayBTC)
+currencyValueFixed2.onload(displaySats)
 currencySelect1.addEventListener("change", changeCurrency1)
 currencySelect2.addEventListener("change", changeCurrency2)
 convertButton.addEventListener("click", convertValues)
