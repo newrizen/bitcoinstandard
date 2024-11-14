@@ -3,8 +3,8 @@ const convertButton = document.querySelector(".convert-button")
 const currencySelect1 = document.querySelector(".currency-select1")
 const currencySelect2 = document.querySelector(".currency-select2")
 
-const currencyValueConverted1 = document.querySelector(".currency-value-1"); // valor de 1 Real em BTC
-const currencyValueConverted2 = document.querySelector(".currency-value-2"); // valor de 1 Real em sats
+const currencyValueFixed1 = document.querySelector(".currency-value-1"); // valor de 1 Real em BTC
+const currencyValueFixed2 = document.querySelector(".currency-value-2"); // valor de 1 Real em sats
 
 
 function convertValues0() {
@@ -13,13 +13,13 @@ function convertValues0() {
 
 
     // Função para exibir satoshis e sats diretamente
-    function displaySatoshisAndSats() {
-        const satoshisValueFormatted = (1 / bitcoinToday).toFixed(8);       // valor em satoshis com 8 casas decimais
-        const satsValueFormatted = (1 / bitcoinToday * 100000000).toFixed(0); // valor em sats (inteiro)
-        
-        // Exibir valores no HTML
-        currencyValueConverted1.innerHTML = `${satoshisValueFormatted} BTC (Satoshis)`;   // Exibe os satoshis
-        currencyValueConverted2.innerHTML = `${satsValueFormatted} sats`;                 // Exibe os sats
+async function displaySatoshisAndSats() {
+    const btcValueFormatted = (1 / bitcoinToday).toFixed(8);              // valor em satoshis com 8 casas decimais
+    const satsValueFormatted = (1 / bitcoinToday * 100000000).toFixed(0); // valor em sats (inteiro)
+    
+    // Exibir valores no HTML
+    currencyValueFixed1.innerHTML = `${btcValueFormatted} BTC (Satoshis)`;      // Exibe os satoshis
+    currencyValueFixed2.innerHTML = `${satsValueFormatted} sats`;               // Exibe os sats
     }
 
 async function convertValues() {
@@ -70,11 +70,11 @@ async function convertValues() {
         }).format(inputCurrencyValue)                                      //repetir o valor que está no input
     }
     
-//    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
-//        style: "currency",
-//        currency: "BRL"
-//    }).format(inputCurrencyValue)                                            //repetir o valor que está no input
-//}
+    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    }).format(inputCurrencyValue)                                            //repetir o valor que está no input
+}
 
 
     
