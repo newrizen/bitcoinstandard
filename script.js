@@ -71,6 +71,13 @@ async function convertValues() {
         }).format(inputCurrencyValue / dolarToday)                               //valor convertido => valor escrito / valor do Dólar hoje
     }
     
+    if(currencySelect1.value == "real2"){
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue)                                             //repetir o valor que está no input
+    }
+    
     if (currencySelect2.value == "euro2") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
