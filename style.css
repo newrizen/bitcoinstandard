@@ -58,7 +58,7 @@ main{
 
 #traits, #seed, #electrum, #trilemma{
     width: 100%; /* Deixa as imagens responsivas */
-    max-width: 500px; /* Limita a largura máxima das imagens */
+    max-width: 650px; /* Limita a largura máxima das imagens */
     margin: 0 auto; /* Centraliza as imagens */
 }
 
@@ -93,6 +93,7 @@ button {
     border: none;
     height: 48px;
     width: 100%;
+    padding-left: 18px;
     color: white;
     font-size: 18px;
     font-weight: 700;
