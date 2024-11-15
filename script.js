@@ -204,7 +204,7 @@ function changeCurrency2() {
     convertValues()
 }
 
-Executa a função quando a página estiver carregada
+//Executa a função quando a página estiver carregada
 window.onload = function() {
     displayBTC();
     displaySats();
