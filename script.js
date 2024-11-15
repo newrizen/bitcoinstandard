@@ -3,16 +3,31 @@ const convertButton = document.querySelector(".convert-button")
 const currencySelect1 = document.querySelector(".currency-select1")
 const currencySelect2 = document.querySelector(".currency-select2")
 
-const currencyValue1BRLBTC = document.querySelector(".currency-btc"); // valor de 1 Real em BTC
+const currencyValueBTCUSD = document.querySelector(".currency-btcusd"); // valor de 1 Real em BTC
+const currencyValueBTCBRL = document.querySelector(".currency-btcbrl"); // valor de 1 Real em sats
+
+const currencyValue1BRLBTC = document.querySelector(".currency-btc");   // valor de 1 Real em BTC
 const currencyValue1BRLsats = document.querySelector(".currency-sats"); // valor de 1 Real em sats
 
 
-//async function convertValues0() {
-//    const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
-//     const BitcoinRealToday = dataApi.BTCBRL.high
-//    }
+async function displayBTCUSD() {
+    const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-USD").then(element => element.json())
+    const BitcoinRealToday = dataApi.BTCUSD.high
+    const btcValueFormatted = (BitcoinRealToday).toFixed(0);              // valor em satoshis com 8 casas decimais
     
-    // Função para exibir satoshis e sats diretamente
+    // Exibir valores no HTML
+    currencyValueBTCUSD.innerHTML = `${btcValueFormatted}`;                 // Exibe os dolares
+    }
+
+async function displayBTCBRL() {
+    const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
+    const BitcoinRealToday = dataApi.BTCBRL.high
+    const btcValueFormatted = (BitcoinRealToday).toFixed(0);              // valor em satoshis com 8 casas decimais
+    
+    // Exibir valores no HTML
+    currencyValueBTCBRL.innerHTML = `${btcValueFormatted}`;                 // Exibe os reais
+    }
+
 async function displayBTC() {
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
     const BitcoinRealToday = dataApi.BTCBRL.high
@@ -207,6 +222,8 @@ function changeCurrency2() {
 }
 
 function setUpEvents(){
+    displayBTCUSD()
+    displayBTCBRL()
     displayBTC();
     displaySats();
 }
