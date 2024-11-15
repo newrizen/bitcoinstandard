@@ -3,8 +3,8 @@ const convertButton = document.querySelector(".convert-button")
 const currencySelect1 = document.querySelector(".currency-select1")
 const currencySelect2 = document.querySelector(".currency-select2")
 
-const currencyValueFixed1 = document.querySelector(".currency-value-1"); // valor de 1 Real em BTC
-const currencyValueFixed2 = document.querySelector(".currency-value-2"); // valor de 1 Real em sats
+const currencyValue1BRLBTC = document.querySelector(".currency-btc"); // valor de 1 Real em BTC
+const currencyValue1BRLsats = document.querySelector(".currency-sats"); // valor de 1 Real em sats
 
 
 //async function convertValues0() {
@@ -16,21 +16,19 @@ const currencyValueFixed2 = document.querySelector(".currency-value-2"); // valo
 async function displayBTC() {
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
     const BitcoinRealToday = dataApi.BTCBRL.high
-    //const currencyValueConverted = document.querySelector(".currency-value-1")             //valor em outras moedas 2
     const btcValueFormatted = (1 / BitcoinRealToday).toFixed(8);              // valor em satoshis com 8 casas decimais
     
     // Exibir valores no HTML
-    currencyValueFixed1.innerHTML = `${btcValueFormatted} btc`;                 // Exibe os satoshis
+    currencyValue1BRLBTC.innerHTML = `${btcValueFormatted} btc`;                 // Exibe os satoshis
     }
 
 async function displaySats() {
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
     const BitcoinRealToday = dataApi.BTCBRL.high
-    //const currencyValueConverted = document.querySelector(".currency-value-2")             //valor em outras moedas 2
     const satsValueFormatted = (1 / BitcoinRealToday * 100000000).toFixed(0); // valor em sats (inteiro)
     
     // Exibir valores no HTML
-    currencyValueFixed2.innerHTML = `${satsValueFormatted} sats`;                          // Exibe os sats
+    currencyValue1BRLsats.innerHTML = `${satsValueFormatted} sats`;                          // Exibe os sats
     }
 
 
@@ -218,8 +216,6 @@ window.onload = function() {
     setUpEvents();
 };
 
-//currencyValueFixed1.onload(displayBTC)
-//currencyValueFixed2.onload(displaySats)
 currencySelect1.addEventListener("change", changeCurrency1)
 currencySelect2.addEventListener("change", changeCurrency2)
 convertButton.addEventListener("click", convertValues)
