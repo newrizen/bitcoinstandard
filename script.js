@@ -20,7 +20,7 @@ async function displayBTC() {
     const btcValueFormatted = (1 / BitcoinRealToday).toFixed(8);              // valor em satoshis com 8 casas decimais
     
     // Exibir valores no HTML
-    currencyValueFixed1.innerHTML = `₿ ${btcValueFormatted}`;                 // Exibe os satoshis
+    currencyValueFixed1.innerHTML = `${btcValueFormatted} btc`;                 // Exibe os satoshis
     }
 
 async function displaySats() {
@@ -30,7 +30,7 @@ async function displaySats() {
     const satsValueFormatted = (1 / BitcoinRealToday * 100000000).toFixed(0); // valor em sats (inteiro)
     
     // Exibir valores no HTML
-    currencyValueFixed2.innerHTML = `${satsValueFormatted}`;                          // Exibe os sats
+    currencyValueFixed2.innerHTML = `${satsValueFormatted} sats`;                          // Exibe os sats
     }
 
 
