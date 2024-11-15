@@ -14,6 +14,8 @@ const currencyValueFixed2 = document.querySelector(".currency-value-2"); // valo
     
     // Função para exibir satoshis e sats diretamente
 async function displayBTC() {
+    const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
+    const BitcoinRealToday = dataApi.BTCBRL.high
     const currencyValueConverted = document.querySelector(".currency-value-1")             //valor em outras moedas 2
     const btcValueFormatted = (1 / BitcoinRealToday).toFixed(8);              // valor em satoshis com 8 casas decimais
     
@@ -22,6 +24,8 @@ async function displayBTC() {
     }
 
 async function displaySats() {
+    const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
+    const BitcoinRealToday = dataApi.BTCBRL.high
     const currencyValueConverted = document.querySelector(".currency-value-2")             //valor em outras moedas 2
     const satsValueFormatted = (1 / BitcoinRealToday * 100000000).toFixed(0); // valor em sats (inteiro)
     
