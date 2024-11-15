@@ -13,7 +13,7 @@ const currencyValue1BRLsats = document.querySelector(".currency-sats"); // valor
 async function displayBTCUSD() {
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-USD").then(element => element.json())
     const BitcoinDolarToday = dataApi.BTCUSD.high
-    const btcValueFormatted = (BitcoinDolarToday).toFixed(0);              // valor em satoshis com 8 casas decimais
+    const btcValueFormatted = (BitcoinDolarToday);              // valor em satoshis com 8 casas decimais
     
     // Exibir valores no HTML
     currencyValueBTCUSD.innerHTML = `${btcValueFormatted}`;                 // Exibe os dolares
@@ -22,7 +22,7 @@ async function displayBTCUSD() {
 async function displayBTCBRL() {
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
     const BitcoinRealToday = dataApi.BTCBRL.high
-    const btcValueFormatted = (BitcoinRealToday).toFixed(0);              // valor em satoshis com 8 casas decimais
+    const btcValueFormatted = (BitcoinRealToday);              // valor em satoshis com 8 casas decimais
     
     // Exibir valores no HTML
     currencyValueBTCBRL.innerHTML = `${btcValueFormatted}`;                 // Exibe os reais
