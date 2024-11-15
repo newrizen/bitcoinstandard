@@ -204,10 +204,14 @@ function changeCurrency2() {
     convertValues()
 }
 
-//Executa a função quando a página estiver carregada
-window.onload = function() {
+function setUpEvents(){
     displayBTC();
     displaySats();
+}
+
+//Executa a função quando a página estiver carregada
+window.onload = function() {
+    setUpEvents();
 };
 
 //currencyValueFixed1.onload(displayBTC)
