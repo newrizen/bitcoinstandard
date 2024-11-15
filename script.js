@@ -16,21 +16,21 @@ const currencyValueFixed2 = document.querySelector(".currency-value-2"); // valo
 async function displayBTC() {
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
     const BitcoinRealToday = dataApi.BTCBRL.high
-    const currencyValueConverted = document.querySelector(".currency-value-1")             //valor em outras moedas 2
+    //const currencyValueConverted = document.querySelector(".currency-value-1")             //valor em outras moedas 2
     const btcValueFormatted = (1 / BitcoinRealToday).toFixed(8);              // valor em satoshis com 8 casas decimais
     
     // Exibir valores no HTML
-    currencyValueFixed1.innerHTML = `${btcValueFormatted} BTC (Satoshis)`;                 // Exibe os satoshis
+    currencyValueFixed1.innerHTML = `₿ ${btcValueFormatted}`;                 // Exibe os satoshis
     }
 
 async function displaySats() {
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/BTC-BRL").then(element => element.json())
     const BitcoinRealToday = dataApi.BTCBRL.high
-    const currencyValueConverted = document.querySelector(".currency-value-2")             //valor em outras moedas 2
+    //const currencyValueConverted = document.querySelector(".currency-value-2")             //valor em outras moedas 2
     const satsValueFormatted = (1 / BitcoinRealToday * 100000000).toFixed(0); // valor em sats (inteiro)
     
     // Exibir valores no HTML
-    currencyValueFixed2.innerHTML = `${satsValueFormatted} sats`;                          // Exibe os sats
+    currencyValueFixed2.innerHTML = `${satsValueFormatted}`;                          // Exibe os sats
     }
 
 
