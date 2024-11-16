@@ -128,6 +128,11 @@ async function convertValues() {
         //    currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
         //}
             
+        else if (currencySelect1.value == "bitcoin1" && currencySelect2.value == "bitcoin2") {
+            const bitcoinValueFormatted = (inputCurrencyValue).toFixed(8); // formata o valor com 8 casas decimais
+            currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
+        }
+            
         else if (currencySelect2.value == "bitcoin2") {
             const bitcoinValueFormatted = (inputCurrencyValue / BitcoinRealToday).toFixed(8); // formata o valor com 8 casas decimais
             currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
@@ -137,7 +142,14 @@ async function convertValues() {
             currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
                 style: "currency",
                 currency: "USD"
-            }).format(BitcoinDolarToday / inputCurrencyValue)                               //valor convertido => valor escrito / valor do Dólar hoje
+            }).format(inputCurrencyValue * BitcoinDolarToday)                               //valor convertido => valor escrito / valor do Dólar hoje
+        }
+
+        else if (currencySelect1.value == "dolar1" && currencySelect2.value == "dolar2") {
+            currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD"
+            }).format(inputCurrencyValue)                               //valor convertido => valor escrito / valor do Dólar hoje
         }
             
         else if (currencySelect2.value == "dolar2") {
@@ -153,14 +165,28 @@ async function convertValues() {
                 currency: "BRL"
             }).format(inputCurrencyValue)                                               //repetir o valor que está no input
         }
-        
+
+        else if (currencySelect1.value == "euro1" && currencySelect2.value == "euro2") {
+            currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+                style: "currency",
+                currency: "EUR"
+            }).format(inputCurrencyValue)                             //valor convertido => valor escrito / valor do Euro hoje
+        }
+            
         else if (currencySelect2.value == "euro2") {
             currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
                 style: "currency",
                 currency: "EUR"
             }).format(inputCurrencyValue / EuroRealToday)                             //valor convertido => valor escrito / valor do Euro hoje
         }
-    
+
+        else if(currencySelect1.value == "libra1" $$ currencySelect2.value == "libra2"){
+            currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
+                style: "currency",
+                currency: "GBP"
+            }).format(inputCurrencyValue)                           //valor convertido => valor escrito / valor da Libra hoje 
+        }
+            
         else if(currencySelect2.value == "libra2"){
             currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
                 style: "currency",
