@@ -59,14 +59,14 @@ async function convertValues() {
     const EuroRealToday = dataApi.EURBRL.high
     const LibraRealToday = dataApi.GBPBRL.high
     
-    //const BitcoinDolarToday = dataApi.BTCUSD.high
-    //const EuroDolarToday = dataApi.EURUSD.high
-    //const LibraDolarToday = dataApi.GBPUSD.high
+    const BitcoinDolarToday = dataApi.BTCUSD.high
+    const EuroDolarToday = dataApi.EURUSD.high
+    const LibraDolarToday = dataApi.GBPUSD.high
 
-    //const BitcoinEuroToday = dataApi.BTCEUR.high
-    //const LibraEuroToday = dataApi.GBPEUR.high 
+    const BitcoinEuroToday = dataApi.BTCEUR.high
+    const LibraEuroToday = dataApi.GBPEUR.high 
 
-    //const BitcoinLibraToday = dataApi.EURGBP.high
+    const BitcoinLibraToday = dataApi.EURGBP.high
     
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
@@ -82,7 +82,7 @@ async function convertValues() {
 
         else if (currencySelect1.value == "bitcoin1") {
             const bitcoinValueFormatted = (inputCurrencyValue).toFixed(8); // formata o valor com 8 casas decimais
-            currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
+            currencyValueToConvert.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
         }
         
         else if (currencySelect1.value == "dolar1") {
