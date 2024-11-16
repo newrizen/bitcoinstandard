@@ -86,7 +86,7 @@ async function convertValues() {
         }
         
         else if (currencySelect1.value == "dolar1") {
-            currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+            currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
                 style: "currency",
                 currency: "USD"
             }).format(inputCurrencyValue)                                        //repetir o valor que está no input
