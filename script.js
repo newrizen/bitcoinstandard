@@ -121,7 +121,7 @@ async function convertValues() {
             currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
                 style: "currency",
                 currency: "USD"
-            }).format(inputCurrencyValue / BitcoinDolarToday)                               //valor convertido => valor escrito / valor do Dólar hoje
+            }).format(inputCurrencyValue * BitcoinDolarToday)                               //valor convertido => valor escrito / valor do Dólar hoje
         }
     
         else if (currencySelect2.value == "dolar2") {
