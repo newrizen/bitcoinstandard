@@ -52,7 +52,7 @@ async function convertValues() {
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")    //valor em moedas 1 - antes BRL
     const currencyValueConverted = document.querySelector(".currency-value")             //valor em outras moedas 2
 
-    const dataApi = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL,BTC-USD,BTC-EUR,BTC-GBP,EUR-USD,GBP-USD,EUR-GBP").then(element => element.json())
+    const dataApi = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL,BTC-USD,BTC-EUR,EUR-USD,GBP-USD,EUR-GBP").then(element => element.json())
 
     const BitcoinRealToday = dataApi.BTCBRL.high
     const DolarRealToday = dataApi.USDBRL.high
@@ -66,7 +66,7 @@ async function convertValues() {
     const BitcoinEuroToday = dataApi.BTCEUR.high
     //const LibraEuroToday = dataApi.GBPEUR.high 
 
-    const BitcoinLibraToday = dataApi.BTCGBP.high
+    //const BitcoinLibraToday = dataApi.BTCGBP.high
     //const BitcoinLibraToday = dataApi.EURGBP.high
     
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
@@ -118,21 +118,28 @@ async function convertValues() {
             currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
     }
 
-        else if (currencySelect1.value == "libra1" && currencySelect2.value == "bitcoin2") {
+        else if (currencySelect1.value == "euro1" && currencySelect2.value == "bitcoin2") {
             const bitcoinValueFormatted = (inputCurrencyValue / BitcoinEuroToday).toFixed(8); // formata o valor com 8 casas decimais
             currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
         }
 
-        else if (currencySelect1.value == "euro1" && currencySelect2.value == "bitcoin2") {
-            const bitcoinValueFormatted = (inputCurrencyValue / BitcoinLibraToday).toFixed(8); // formata o valor com 8 casas decimais
-            currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
-        }
-        
+        //else if (currencySelect1.value == "libra1" && currencySelect2.value == "bitcoin2") {
+        //    const bitcoinValueFormatted = (inputCurrencyValue / BitcoinLibraToday).toFixed(8); // formata o valor com 8 casas decimais
+        //    currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
+        //}
+            
         else if (currencySelect2.value == "bitcoin2") {
             const bitcoinValueFormatted = (inputCurrencyValue / BitcoinRealToday).toFixed(8); // formata o valor com 8 casas decimais
             currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
         }
-    
+
+        else if (currencySelect1.value == "bitcoin1" && currencySelect2.value == "dolar2") {
+            currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD"
+            }).format(BitcoinDolarToday / inputCurrencyValue)                               //valor convertido => valor escrito / valor do Dólar hoje
+        }
+            
         else if (currencySelect2.value == "dolar2") {
             currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
                 style: "currency",
