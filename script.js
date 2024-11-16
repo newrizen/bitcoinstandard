@@ -112,16 +112,16 @@ async function convertValues() {
         }).format(inputCurrencyValue)                                               //repetir o valor que está no input
         }
     
-    if (currencySelect2.value == "bitcoin2") {
-        const bitcoinValueFormatted = (inputCurrencyValue / BitcoinRealToday).toFixed(8); // formata o valor com 8 casas decimais
-        currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
-    }
-        
-        else if (currencySelect1.value == "dolar1" && currencySelect2.value == "bitcoin2") {
+    if (currencySelect1.value == "dolar1" && currencySelect2.value == "bitcoin2") {
             currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
                 style: "currency",
                 currency: "USD"
             }).format(inputCurrencyValue * BitcoinDolarToday)                               //valor convertido => valor escrito / valor do Dólar hoje
+    }
+        
+        else if (currencySelect2.value == "bitcoin2") {
+            const bitcoinValueFormatted = (inputCurrencyValue / BitcoinRealToday).toFixed(8); // formata o valor com 8 casas decimais
+            currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
         }
     
         else if (currencySelect2.value == "dolar2") {
