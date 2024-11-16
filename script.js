@@ -74,7 +74,7 @@ async function convertValues() {
     }).format(inputCurrencyValue)                                               //repetir o valor que está no input
     
     if(currencySelect1.value == "real1"){
-        currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL"
         }).format(inputCurrencyValue)                                         //repetir o valor que está no input
@@ -82,7 +82,7 @@ async function convertValues() {
 
         else if (currencySelect1.value == "bitcoin1") {
             const bitcoinValueFormatted = (inputCurrencyValue).toFixed(8); // formata o valor com 8 casas decimais
-            currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
+            currencyValueToConvert.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
         }
         
         else if (currencySelect1.value == "dolar1") {
@@ -93,14 +93,14 @@ async function convertValues() {
         }
         
         else if (currencySelect1.value == "euro1") {
-            currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+            currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", {
                 style: "currency",
                 currency: "EUR"
             }).format(inputCurrencyValue)                                       //repetir o valor que está no input
         }
     
         else if(currencySelect1.value == "libra1"){
-            currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
+            currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-GB", {
                 style: "currency",
                 currency: "GBP"
             }).format(inputCurrencyValue)                                      //repetir o valor que está no input
