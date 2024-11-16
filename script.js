@@ -59,7 +59,7 @@ async function convertValues() {
     const EuroRealToday = dataApi.EURBRL.high
     const LibraRealToday = dataApi.GBPBRL.high
     
-    //const BitcoinDolarToday = dataApi.BTCUSD.high
+    const BitcoinDolarToday = dataApi.BTCUSD.high
     //const EuroDolarToday = dataApi.EURUSD.high
     //const LibraDolarToday = dataApi.GBPUSD.high
 
@@ -123,7 +123,14 @@ async function convertValues() {
                 currency: "USD"
             }).format(inputCurrencyValue / DolarRealToday)                               //valor convertido => valor escrito / valor do Dólar hoje
         }
-        
+
+        else if (currencySelect1.value == "bitcoin1" && currencySelect2.value == "dolar2") {
+            currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD"
+            }).format(BitcoinDolarToday)                               //valor convertido => valor escrito / valor do Dólar hoje
+        }
+            
         else if(currencySelect2.value == "real2"){
             currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
                 style: "currency",
