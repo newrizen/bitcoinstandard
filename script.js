@@ -82,7 +82,7 @@ async function convertValues() {
 
         else if (currencySelect1.value == "bitcoin1") {
             const bitcoinValueFormatted = (inputCurrencyValue).toFixed(8); // formata o valor com 8 casas decimais
-            currencyValueToConvert.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
+            currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
         }
         
         else if (currencySelect1.value == "dolar1") {
