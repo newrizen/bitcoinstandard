@@ -113,10 +113,8 @@ async function convertValues() {
         }
     
     if (currencySelect1.value == "dolar1" && currencySelect2.value == "bitcoin2") {
-            currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
-                style: "currency",
-                currency: "USD"
-            }).format(inputCurrencyValue * BitcoinDolarToday)                               //valor convertido => valor escrito / valor do Dólar hoje
+            const bitcoinValueFormatted = (inputCurrencyValue / BitcoinDolarToday).toFixed(8); // formata o valor com 8 casas decimais
+            currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
     }
         
         else if (currencySelect2.value == "bitcoin2") {
