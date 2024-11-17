@@ -1,5 +1,6 @@
 *{
-    font-family:'Courier New', Courier, monospace;
+    /*font-family:'Courier New', Courier, monospace;*/
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box; /* Garante que padding e border não aumentem a largura do elemento */
 }
 
@@ -22,6 +23,7 @@ main{
     border-radius: 20px;
     margin: 0 auto 50px;
     padding: 44px 24px 23px;
+    align-items: center;
 }
 
 .iframe-container {
