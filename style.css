@@ -19,7 +19,7 @@ main{
 
 .main2 {
     width: 500px;
-    background: #f4f4f4;
+    background: #232323;
     border-radius: 20px;
     margin: 0 auto 50px;
     padding: 44px 24px 23px;
@@ -63,6 +63,7 @@ main{
 
 .small-text{
     font-size: 10px;
+    color: #999999;
 }
 
 #traits, #seed, #electrum, #trilemma{
@@ -141,7 +142,7 @@ button:active {
 }
 
 .currency {
-    color: #A8A8A8;
+    color: #999999;
     font-size: 14px;
 }
 
