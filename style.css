@@ -16,6 +16,13 @@ main{
     padding: 20px; /* Aplica um espaçamento interno */
 }
 
+.main2 {
+    width: 375px;
+    background: #f4f4f4;
+    border-radius: 20px;
+    margin: 0 auto 50px;
+    padding: 44px 24px 23px;
+}
 
 .iframe-container {
     position: relative;
