@@ -17,15 +17,6 @@ main{
     padding: 20px; /* Aplica um espaçamento interno */
 }
 
-.main2 {
-    width: 450px;
-    background: #232323;
-    border-radius: 20px;
-    margin: 0 auto 50px;
-    padding: 44px 24px 23px;
-    align-items: center;
-}
-
 .iframe-container {
     position: relative;
     width: 100%;       /* Largura do contêiner */
@@ -74,6 +65,15 @@ main{
 
 a:link, a:visited{
     color: #AE8CD6;
+}
+
+.conversor {
+    width: 450px;
+    background: #232323;
+    border-radius: 20px;
+    margin: 0 auto 50px;
+    padding: 44px 24px 23px;
+    align-items: center;
 }
 
 label {
