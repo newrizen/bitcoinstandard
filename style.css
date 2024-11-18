@@ -75,7 +75,6 @@ a:link, a:visited{
     padding: 44px 24px 23px;
     align-items: center;
     display: flex;
-    flex-direction: column;
 }
 
 label {
