@@ -68,13 +68,12 @@ a:link, a:visited{
 }
 
 .conversor {
-    width: 450px;
+    max-width: 450px;
     background: #232323;
     border-radius: 20px;
     margin: 0 auto 50px;
     padding: 44px 24px 23px;
     align-items: center;
-    display: flex;
 }
 
 label {
