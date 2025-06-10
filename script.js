@@ -48,9 +48,19 @@ async function displaySats() {
 
 
 async function convertValues() {
-    const inputCurrencyValue = Number(document.querySelector(".input-currency").value.replace(/[^\d,-]/g, "").replace(",", "."));
-    const currencyValueToConvert = document.querySelector(".currency-value-to-convert")    //valor em moedas 1 - antes BRL
-    const currencyValueConverted = document.querySelector(".currency-value")             //valor em outras moedas 2
+    let rawValue = document.querySelector(".input-currency").value.replace(/[^\d,.-]/g, "");
+
+    // Substitui vírgulas por pontos e remove todos os pontos menos o último, que será o separador decimal
+    rawValue = rawValue.replace(/,/g, '.');
+    const parts = rawValue.split('.');
+    const decimal = parts.pop(); // último ponto é o separador decimal
+    const integer = parts.join(''); // junta os outros como parte inteira
+
+    const inputCurrencyValue = Number(integer + '.' + decimal);
+
+    const currencyValueToConvert = document.querySelector(".currency-value-to-convert");    // valor em moedas 1 - antes BRL
+    const currencyValueConverted = document.querySelector(".currency-value");               // valor em outras moedas 2
+}
 
     const dataApi = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL,GBP-BRL,BTC-USD,BTC-EUR,EUR-USD,GBP-USD,GBP-EUR").then(element => element.json())
 
