@@ -52,7 +52,7 @@ async function convertValues() {
     // Substitui vírgulas por pontos e remove todos os pontos menos o último, que será o separador decimal
     rawValue = rawValue.replace(/,/g, '.');
 
-    let inputCurrencyValue;
+    //let inputCurrencyValue;
 
     if (rawValue.includes('.')) {
         const parts = rawValue.split('.');
@@ -60,7 +60,8 @@ async function convertValues() {
         const integer = parts.join('');
         inputCurrencyValue = Number(integer + '.' + decimal);
     } else {
-        inputCurrencyValue = Number(rawValue); // trata como número inteiro, ex: 6000 → 6000.00
+        inputCurrencyValue = Number(rawValue);
+        // trata como número inteiro, ex: 6000 → 6000.00
     }
     
     // Substitui vírgulas por pontos e remove todos os pontos menos o último, que será o separador decimal
