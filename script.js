@@ -119,6 +119,12 @@ async function convertValues() {
                 currency: "GBP"
             }).format(inputCurrencyValue)                                      //repetir o valor que está no input
         }
+
+        else if (currencySelect1.value == "satoshi1") {
+            const bitcoinValueFormatted = (inputCurrencyValue * 100000000).toFixed(0); // formata o valor com 8 casas decimais
+            currencyValueToConvert.innerHTML = "sat " + bitcoinValueFormatted;             // exibe o valor sem casas decimais
+        }
+            
         else {
             currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
                 style: "currency",
@@ -150,7 +156,7 @@ async function convertValues() {
             const bitcoinValueFormatted = (inputCurrencyValue / BitcoinRealToday).toFixed(8); // formata o valor com 8 casas decimais
             currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
         }
-
+            
         else if (currencySelect1.value == "bitcoin1" && currencySelect2.value == "dolar2") {
             currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
                 style: "currency",
@@ -283,6 +289,11 @@ async function convertValues() {
                 currency: "GBP"
             }).format(inputCurrencyValue / LibraRealToday)                           //valor convertido => valor escrito / valor da Libra hoje 
         }
+
+        else if (currencySelect2.value == "satoshi2") {
+            const bitcoinValueFormatted = (inputCurrencyValue / BitcoinRealToday * 100000000).toFixed(0); // formata o valor sem casas decimais
+            currencyValueConverted.innerHTML = "sat " + bitcoinValueFormatted;             // exibe o valor sem casas decimais
+        }
 }
 
 
@@ -317,6 +328,11 @@ function changeCurrency1() {
         currancyImage1.src = "./assets/libra.png"
     }
 
+    if (currencySelect1.value == "satoshi1") {
+        currencyName1.innerHTML = "Bitcoin"
+        currancyImage1.src = "./assets/bitcoin.png"
+    }
+    
     convertValues()
 }
     
@@ -349,7 +365,12 @@ function changeCurrency2() {
         currencyName2.innerHTML = "Libra"
         currancyImage2.src = "./assets/libra.png"
     }
-
+    
+    if (currencySelect1.value == "satoshi2") {
+        currencyName1.innerHTML = "Bitcoin"
+        currancyImage1.src = "./assets/bitcoin.png"
+    }
+    
     convertValues()
 }
 
