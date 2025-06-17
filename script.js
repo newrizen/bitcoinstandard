@@ -49,12 +49,25 @@ async function displaySats() {
 
 async function convertValues() {
     let rawValue = document.querySelector(".input-currency").value.replace(/[^\d,.-]/g, "");
-
     // Substitui vírgulas por pontos e remove todos os pontos menos o último, que será o separador decimal
     rawValue = rawValue.replace(/,/g, '.');
-    const parts = rawValue.split('.');
-    const decimal = parts.pop(); // último ponto é o separador decimal
-    const integer = parts.join(''); // junta os outros como parte inteira
+
+    let inputCurrencyValue;
+
+    if (rawValue.includes('.')) {
+        const parts = rawValue.split('.');
+        const decimal = parts.pop();
+        const integer = parts.join('');
+        inputCurrencyValue = Number(integer + '.' + decimal);
+    } else {
+        inputCurrencyValue = Number(rawValue); // trata como número inteiro, ex: 6000 → 6000.00
+    }
+    
+    // Substitui vírgulas por pontos e remove todos os pontos menos o último, que será o separador decimal
+    //rawValue = rawValue.replace(/,/g, '.');
+    //const parts = rawValue.split('.');
+    //const decimal = parts.pop(); // último ponto é o separador decimal
+    //const integer = parts.join(''); // junta os outros como parte inteira
 
     const inputCurrencyValue = Number(integer + '.' + decimal);
 
