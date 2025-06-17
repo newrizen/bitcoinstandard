@@ -52,25 +52,15 @@ async function convertValues() {
     // Substitui vírgulas por pontos e remove todos os pontos menos o último, que será o separador decimal
     rawValue = rawValue.replace(/,/g, '.');
 
-    //let inputCurrencyValue;
-
     if (rawValue.includes('.')) {
         const parts = rawValue.split('.');
         const decimal = parts.pop();
         const integer = parts.join('');
         inputCurrencyValue = Number(integer + '.' + decimal);
     } else {
-        inputCurrencyValue = Number(rawValue);
         // trata como número inteiro, ex: 6000 → 6000.00
+        inputCurrencyValue = Number(rawValue);
     }
-    
-    // Substitui vírgulas por pontos e remove todos os pontos menos o último, que será o separador decimal
-    //rawValue = rawValue.replace(/,/g, '.');
-    //const parts = rawValue.split('.');
-    //const decimal = parts.pop(); // último ponto é o separador decimal
-    //const integer = parts.join(''); // junta os outros como parte inteira
-
-    //const inputCurrencyValue = Number(integer + '.' + decimal);
 
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert");    // valor em moedas 1 - antes BRL
     const currencyValueConverted = document.querySelector(".currency-value");               // valor em outras moedas 2
