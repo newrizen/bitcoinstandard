@@ -70,7 +70,7 @@ async function convertValues() {
     //const decimal = parts.pop(); // último ponto é o separador decimal
     //const integer = parts.join(''); // junta os outros como parte inteira
 
-    const inputCurrencyValue = Number(integer + '.' + decimal);
+    //const inputCurrencyValue = Number(integer + '.' + decimal);
 
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert");    // valor em moedas 1 - antes BRL
     const currencyValueConverted = document.querySelector(".currency-value");               // valor em outras moedas 2
