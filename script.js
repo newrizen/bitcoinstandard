@@ -424,9 +424,9 @@ function changeCurrency2() {
         currancyImage2.src = "./assets/libra.png"
     }
     
-    if (currencySelect1.value == "satoshi2") {
-        currencyName1.innerHTML = "Satoshi"
-        currancyImage1.src = "./assets/bitcoin.png"
+    if (currencySelect2.value == "satoshi2") {
+        currencyName2.innerHTML = "Satoshi"
+        currancyImage2.src = "./assets/bitcoin.png"
     }
     
     convertValues()
