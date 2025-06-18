@@ -146,6 +146,11 @@ async function convertValues() {
             const bitcoinValueFormatted = (inputCurrencyValue * LibraDolarToday / BitcoinDolarToday).toFixed(8); // formata o valor com 8 casas decimais
             currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
         }
+
+        else if (currencySelect1.value == "satoshi1" && currencySelect2.value == "bitcoin2") {
+            const bitcoinValueFormatted = (inputCurrencyValue / 100000000).toFixed(8); // formata o valor com 8 casas decimais
+            currencyValueConverted.innerHTML = "₿ " + bitcoinValueFormatted;             // exibe o valor com 8 casas decimais
+        }
             
         else if (currencySelect1.value == "bitcoin1" && currencySelect2.value == "bitcoin2") {
             const bitcoinValueFormatted = (inputCurrencyValue).toFixed(8); // formata o valor com 8 casas decimais
@@ -176,6 +181,13 @@ async function convertValues() {
                 style: "currency",
                 currency: "USD"
             }).format(inputCurrencyValue)                               //valor convertido => valor escrito / valor do Dólar hoje
+        }
+
+        else if (currencySelect1.value == "satoshi1" && currencySelect2.value == "dolar2") {
+            currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD"
+            }).format(inputCurrencyValue * BitcoinDolarToday / 100000000)                               //valor convertido => valor escrito / valor do Dólar hoje
         }
             
         else if (currencySelect2.value == "dolar2") {
@@ -212,6 +224,13 @@ async function convertValues() {
                 currency: "BRL"
             }).format(inputCurrencyValue * LibraRealToday)                                               //repetir o valor que está no input
         }
+
+        else if (currencySelect1.value == "satoshi1" && currencySelect2.value == "real2") {
+            currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "BRL"
+            }).format(inputCurrencyValue * BitcoinRealToday / 100000000)                               //valor convertido => valor escrito / valor do Dólar hoje
+        }  
             
         else if(currencySelect2.value == "real2"){
             currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
@@ -247,6 +266,13 @@ async function convertValues() {
                 currency: "EUR"
             }).format(inputCurrencyValue)                             //valor convertido => valor escrito / valor do Euro hoje
         }
+
+        else if (currencySelect1.value == "satoshi1" && currencySelect2.value == "euro2") {
+            currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "EUR"
+            }).format(inputCurrencyValue * BitcoinEuroToday)                               //valor convertido => valor escrito / valor do Dólar hoje
+        }   
             
         else if (currencySelect2.value == "euro2") {
             currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
